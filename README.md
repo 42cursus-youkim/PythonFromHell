@@ -1,2 +1,6 @@
-# PythonFromHell
-Python From Hell is a python piscine program designed to learn python fundamentals from bare scratch.
+# 지옥에서 온 파이썬
+
+[read in english!](./README.en.md)
+## 개요
+
+_지옥에서 온 파이썬_ 은 파이썬을 기초부터 배우기 위한 피신 프로그램입니다.

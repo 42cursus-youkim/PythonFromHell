@@ -1,5 +1,7 @@
 # 지옥에서 온 파이썬
 
+[![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
+
 [read in english!](./README.en.md)
 ## 개요
 
@@ -15,10 +17,12 @@
 - *PyNorminette*는 ['파이써닉'](https://blex.me/@baealex/pythonic이란-무엇인가)
   한 코드를 작성하기 위해 준수하여야 하는 규칙의 목록입니다.
 - 모든 프로그램은 [pep8](https://www.python.org/dev/peps/pep-0008/)
-  을 따라야 합니다.
+  을 따라야 합니다. pep8 준수 여부는 `pip install pep8; pep8 program.py`로 확인 가능합니다.
 - 변수, 함수 및 모든 이름은 pep8의 [naming convention](https://www.python.org/dev/peps/pep-0008/#id35)
 을 기본으로 따릅니다.
 ### 서식
+- `shebang` 사용 시 `#!/usr/bin/env python3`형식이어야 합니다.
+- 모든 프로그램은 `main()` 함수에서 시작되어야 합니다.
 - 모든 파일은 [Black](https://github.com/psf/black)
   포매터를 이용해 포매팅되어야 합니다. 아래는 거기에 추가로 준수해야 하는 규칙입니다.
 - 들여쓰기로 공백 4칸을 사용하여야 합니다. 탭 문자의 사용은 금지됩니다.
@@ -40,4 +44,7 @@
 ### 스코프
   - 전역 변수, `global`, `nonlocal` 의 사용은 금지됩니다.
   - `import *` 구문의 사용은 금지됩니다.
+
+### 파이써닉 코딩
+  - 변수 언패킹 시 사용하지 않는 변수는 `_`로 표현합니다.
   - `range(len(x))`의 사용은 금지됩니다.

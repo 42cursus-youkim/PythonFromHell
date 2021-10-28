@@ -1,6 +1,6 @@
 # Python Piscine
 
-## Py01
+## Py00
 
 _요약: 첫날에는 가볍게 파이썬의 기초 문법을 배워 봅시다._
 
@@ -28,14 +28,32 @@ _요약: 첫날에는 가볍게 파이썬의 기초 문법을 배워 봅시다._
 
 ## 연습 00: 안녕 세상!!!
 
-| ⚙️ Py00     | 연습 00    |
+| :gear: Py00 | 연습 00    |
 | :---------- | :--------- |
 | 제출할 폴더 | `ex00`     |
 | 제출할 파일 | `hello.py` |
-| 금지 함수   | `None`     |
 
-- 콘솔에 `Hello World!`을 표시해보세요! 다른 문장이어도 상관 없습니다. 창의력을 발휘해 보아요!
-- 프로그램은 다음과 같이 작성합니다:
+콘솔에 `Hello World!`을 표시해보세요! 다른 문장이어도 상관 없습니다. 창의력을 발휘해 보아요!
+
+> 출력 예시
+
+```bash
+# 예시 1
+$> python3 hello.py
+Hello World!$>
+
+# 예시 2
+$> python3 hello.py
+안녕 세상!$>
+
+# 예시 3
+$> python3 hello.py
+What is the meaning of life, the universe and everything? 42$>
+```
+
+> **줄바꿈**이 있어서는 안 됩니다.
+
+프로그램은 다음과 같이 작성합니다:
 
 ```python
 def main():
@@ -45,32 +63,81 @@ if __name__ == "__main__":
     main()
 ```
 
-출력 예시:
+## 연습 01: 뭐라고???
+
+| :gear: Py00 | 연습 01   |
+| :---------- | :-------- |
+| 제출할 폴더 | `ex01`    |
+| 제출할 파일 | `what.py` |
+
+입력을 받고 다음과 같이 출력하는 프로그램을 만드세요.
+
+> 출력 예시
 
 ```bash
-# 예시 1
-> python3 hello.py
-Hello World!%
+$> python3 what.py
+get input: some random word
+SOME RANDOM WORD!!!
+$>
 
-# 예시 2
-> python3 hello.py
-안녕 세상!%
-
-# 예시 3
-> python3 hello.py
-What is the meaning of life, the universe and everything? 42%
+$> python3 what.py
+get input:
+$>
 ```
 
-> **줄바꿈**이 있어서는 안 됩니다.
+## 연습 02: 안녕 세상???
 
-## ex00
+| :gear: Py00 | 연습 02    |
+| :---------- | :--------- |
+| 제출할 폴더 | `ex02`     |
+| 제출할 파일 | `world.py` |
 
-허용 함수 : print
+어떻게 하면 이렇게 출력할 수 있을까요??
+모듈의 전역 변수를 담고 있는 사전을 출력해 보세요.
 
-print는 파이썬의 문자열 출력 함수입니다
+> 출력 예시
 
-그리고 기본적으로 print로 출력을 하면 줄바꿈이 따라옵니다.
+```bash
+$>python3 world.py
+{'__name__': '__main__', '__doc__': None, '__package__': None, '__loader__': <class '_frozen_importlib.BuiltinImporter'>, '__spec__': None, '__annotations__': {}, '__builtins__': <module 'builtins' (built-in)>}
+$>
+```
 
-이번 과제에서는 줄바꿈을 출력하지 않고, "Hello, World!"를 출력해야 합니다.
+## 연습 03: 안녕 객체???
 
-help() 함수를 이용하여, print에 대해서 알아본다면, 충분히 답을 찾으실 수 있습니다.
+| :gear: Py00 | 연습 03                                 |
+| :---------- | :-------------------------------------- |
+| 제출할 폴더 | `ex03`                                  |
+| 제출할 파일 | `intobj.py`, `strobj.py`, `floatobj.py` |
+
+뭘 했길래 이런 출력이 나왔을까요??
+다음 객체들이 가지고 있는 변수와 기능(Method)들의 목록을 출력해보세요:
+
+- `정수` 객체 `42`
+- `소수` 객체 `3.14`
+- `문자열` 객체 `Spam`
+
+> 출력 예시
+
+```bash
+$>python3 intobj.py
+['__abs__', '__add__', '__and__', '__bool__', '__ceil__', '__class__', '__delattr__', '__dir__', '__divmod__', '__doc__', '__eq__', '__float__', '__floor__', '__floordiv__', '__format__', '__ge__', '__getattribute__', '__getnewargs__', '__gt__', '__hash__', '__index__', '__init__', '__init_subclass__', '__int__', '__invert__', '__le__', '__lshift__', '__lt__', '__mod__', '__mul__', '__ne__', '__neg__', '__new__', '__or__', '__pos__', '__pow__', '__radd__', '__rand__', '__rdivmod__', '__reduce__', '__reduce_ex__', '__repr__', '__rfloordiv__', '__rlshift__', '__rmod__', '__rmul__', '__ror__', '__round__', '__rpow__', '__rrshift__', '__rshift__', '__rsub__', '__rtruediv__', '__rxor__', '__setattr__', '__sizeof__', '__str__', '__sub__', '__subclasshook__', '__truediv__', '__trunc__', '__xor__', 'as_integer_ratio', 'bit_count', 'bit_length', 'conjugate', 'denominator', 'from_bytes', 'imag', 'numerator', 'real', 'to_bytes']
+```
+
+# TODO
+
+## 연습 05: 별 :star: 모양으로 꾸며볼게요
+
+| :gear: Py00 | 연습 05                |
+| :---------- | :--------------------- |
+| 제출할 폴더 | `ex04`                 |
+| 제출할 파일 | `tag.py`               |
+| 금지 함수   | `+`, `%`, `str.format` |
+
+> 출력 예시
+
+```bash
+$>python3 world.py
+{'__name__': '__main__', '__doc__': None, '__package__': None, '__loader__': <class '_frozen_importlib.BuiltinImporter'>, '__spec__': None, '__annotations__': {}, '__builtins__': <module 'builtins' (built-in)>}
+$>
+```

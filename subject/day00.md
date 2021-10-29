@@ -4,9 +4,25 @@
 
 _요약: 첫날에는 가볍게 파이썬의 기초 문법을 배워 봅시다._
 
-> **_오류나 개선 사항은 [이슈 트래커](https://github.com/youkim005/PythonFromHell/issues)에 등록해 주세요_**
+> :information_source: 오류나 개선 사항은 [이슈 트래커](https://github.com/youkim005/PythonFromHell/issues)에 등록해 주세요
 
 # 목차
+
+- [Python Piscine](#python-piscine)
+  - [Py00](#py00)
+- [목차](#목차)
+- [챕터 1](#챕터-1)
+  - [개요](#개요)
+- [챕터 2](#챕터-2)
+  - [시작하기 전에](#시작하기-전에)
+- [챕터 3](#챕터-3)
+  - [연습 00: 안녕 세상!!!](#연습-00-안녕-세상)
+  - [연습 01: 안녕 모듈???](#연습-01-안녕-모듈)
+  - [연습 02: 메아리](#연습-02-메아리)
+  - [연습 03: 안녕 변수???](#연습-03-안녕-변수)
+  - [연습 04: 안녕 객체???](#연습-04-안녕-객체)
+- [TODO](#todo)
+  - [연습 05: 별 :star: 모양으로 꾸며볼게요](#연습-05-별-star-모양으로-꾸며볼게요)
 
 # 챕터 1
 
@@ -22,7 +38,7 @@ _요약: 첫날에는 가볍게 파이썬의 기초 문법을 배워 봅시다._
 
 ![xkcd 353](https://imgs.xkcd.com/comics/python.png)
 
-> ℹ️ `import antigravity`
+> :information_source: `import antigravity`
 
 # 챕터 3
 
@@ -35,7 +51,7 @@ _요약: 첫날에는 가볍게 파이썬의 기초 문법을 배워 봅시다._
 
 콘솔에 `Hello World!`을 표시해보세요! 다른 문장이어도 상관 없습니다. 창의력을 발휘해 보아요!
 
-> 출력 예시
+> :desktop_computer: 출력 예시
 
 ```bash
 # 예시 1
@@ -51,51 +67,30 @@ $> python3 hello.py
 What is the meaning of life, the universe and everything? 42$>
 ```
 
-> **줄바꿈**이 있어서는 안 됩니다.
+> :warning: **줄바꿈**이 있어서는 **안 됩니다.**
 
 프로그램은 다음과 같이 작성합니다:
 
 ```python
 def main():
-  ... # 여기에 몬가 하기
+  ... # 여기에 무언가 하기
 
 if __name__ == "__main__":
     main()
 ```
 
-## 연습 01: 뭐라고???
+## 연습 01: 안녕 모듈???
 
-| :gear: Py00 | 연습 01   |
-| :---------- | :-------- |
-| 제출할 폴더 | `ex01`    |
-| 제출할 파일 | `what.py` |
-
-입력을 받고 다음과 같이 출력하는 프로그램을 만드세요.
-
-> 출력 예시
-
-```bash
-$> python3 what.py
-get input: some random word
-SOME RANDOM WORD!!!
-$>
-
-$> python3 what.py
-get input:
-$>
-```
-
-## 연습 02: 안녕 세상???
-
-| :gear: Py00 | 연습 02    |
+| :gear: Py00 | 연습 01    |
 | :---------- | :--------- |
-| 제출할 폴더 | `ex02`     |
+| 제출할 폴더 | `ex01`     |
 | 제출할 파일 | `world.py` |
 
-어떻게 하면 이렇게 출력할 수 있을까요??
+파이썬의 각 파일은 모듈이랍니다.
+그런데 어떻게 하면 이렇게 출력할 수 있을까요??
 모듈의 전역 변수를 담고 있는 사전을 출력해 보세요.
 
-> 출력 예시
+> :desktop_computer: 출력 예시
 
 ```bash
 $>python3 world.py
@@ -103,11 +98,69 @@ $>python3 world.py
 $>
 ```
 
-## 연습 03: 안녕 객체???
+> :information_source: `globals()`
 
-| :gear: Py00 | 연습 03                                 |
+## 연습 02: 메아리
+
+| :gear: Py00 | 연습 01   |
+| :---------- | :-------- |
+| 제출할 폴더 | `ex01`    |
+| 제출할 파일 | `echo.py` |
+
+문자열 입력을 받고 그대로 다시 출력하는 프로그램을 만들어보세요.
+
+> :desktop_computer: 출력 예시
+
+```bash
+$> python3 what.py
+get input: some random word
+some random word
+$>
+
+$> python3 what.py
+get input:
+$>
+```
+
+## 연습 03: 안녕 변수???
+
+| :gear: Py00 | 연습 03      |
+| :---------- | :----------- |
+| 제출할 폴더 | `ex03`       |
+| 제출할 파일 | `my_vars.py` |
+
+파이썬에서 모든 변수는 객체를 '가리키는' **명찰**입니다. 변수에 대해 알아 볼까요?
+
+1. 다음 코드를 `main()`문 맨 윗 줄에 적어 주세요; `spam`은 아래 과제에서 사용할 `변수`입니다.
+
+```python
+spam = 42
+```
+
+2. 변수(가 가리키는 객체)의 값을 출력하세요.
+3. 변수(가 가리키는 객체)의 주소를 16진수로 출력하세요.
+4. 변수(가 가리키는 객체)의 속성을 출력하세요.
+5. 변수(가 가리키는 객체)에 11을 더한 값을 출력하세요.
+
+> :bulb: 메모리 주소는 실행 시마다 변경될 수 있습니다. 걱정하지 마세요!
+> :desktop_computer: 출력 예시
+
+```bash
+$>python3 my_vars.py
+42
+0x208c0950610
+<class 'int'>
+53
+$>
+```
+
+> :information_source: `type`, `id()`, `hex()`
+
+## 연습 04: 안녕 객체???
+
+| :gear: Py00 | 연습 04                                 |
 | :---------- | :-------------------------------------- |
-| 제출할 폴더 | `ex03`                                  |
+| 제출할 폴더 | `ex04`                                  |
 | 제출할 파일 | `intobj.py`, `strobj.py`, `floatobj.py` |
 
 뭘 했길래 이런 출력이 나왔을까요??
@@ -124,6 +177,10 @@ $>python3 intobj.py
 ['__abs__', '__add__', '__and__', '__bool__', '__ceil__', '__class__', '__delattr__', '__dir__', '__divmod__', '__doc__', '__eq__', '__float__', '__floor__', '__floordiv__', '__format__', '__ge__', '__getattribute__', '__getnewargs__', '__gt__', '__hash__', '__index__', '__init__', '__init_subclass__', '__int__', '__invert__', '__le__', '__lshift__', '__lt__', '__mod__', '__mul__', '__ne__', '__neg__', '__new__', '__or__', '__pos__', '__pow__', '__radd__', '__rand__', '__rdivmod__', '__reduce__', '__reduce_ex__', '__repr__', '__rfloordiv__', '__rlshift__', '__rmod__', '__rmul__', '__ror__', '__round__', '__rpow__', '__rrshift__', '__rshift__', '__rsub__', '__rtruediv__', '__rxor__', '__setattr__', '__sizeof__', '__str__', '__sub__', '__subclasshook__', '__truediv__', '__trunc__', '__xor__', 'as_integer_ratio', 'bit_count', 'bit_length', 'conjugate', 'denominator', 'from_bytes', 'imag', 'numerator', 'real', 'to_bytes']
 ```
 
+> :information_source: `dirs()`
+
+> :bulb: `a = 42; a + 11`, `a = 42; a.__add__(11)`
+
 # TODO
 
 ## 연습 05: 별 :star: 모양으로 꾸며볼게요
@@ -135,9 +192,3 @@ $>python3 intobj.py
 | 금지 함수   | `+`, `%`, `str.format` |
 
 > 출력 예시
-
-```bash
-$>python3 world.py
-{'__name__': '__main__', '__doc__': None, '__package__': None, '__loader__': <class '_frozen_importlib.BuiltinImporter'>, '__spec__': None, '__annotations__': {}, '__builtins__': <module 'builtins' (built-in)>}
-$>
-```

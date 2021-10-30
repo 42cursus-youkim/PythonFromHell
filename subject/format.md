@@ -1,6 +1,21 @@
+/\*
+
 [깃허브 이모티콘 목록 :hammer:](https://gist.github.com/rxaviers/7360908)
 
 [마크다운 요약 :page_with_curl:](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
+
+### VSCode에서 마크다운 렌더링 보는 법:
+
+1. 마크다운 파일 열기
+2. `cmd + shift + p`
+3. `Markdown: Open Preview`
+
+### VSCode 마크다운 확장 프로그램 목록:
+
+- [cmd+b,i 단축키, 자동 포매팅, 목차 자동 생성](https://marketplace.visualstudio.com/items?itemName=yzhang.markdown-all-in-one)
+- [미리보기 깃허브 형식으로 바꾸기](https://marketplace.visualstudio.com/items?itemName=bierner.markdown-preview-github-styles)
+- [미리보기에서 이모티콘 렌더링](https://marketplace.visualstudio.com/items?itemName=bierner.markdown-emoji)
+  \*/
 
 ```c
 // 주석

@@ -21,8 +21,7 @@ _요약: 첫날에는 가볍게 파이썬의 기초 문법을 배워 봅시다._
   - [연습 02: 메아리](#연습-02-메아리)
   - [연습 03: 안녕 변수???](#연습-03-안녕-변수)
   - [연습 04: 안녕 객체???](#연습-04-안녕-객체)
-- [TODO](#todo)
-  - [연습 05: 별 :star: 모양으로 꾸며볼게요](#연습-05-별-star-모양으로-꾸며볼게요)
+  - [연습 05: 오늘의 날씨: 맑음](#연습-05-오늘의-날씨-맑음)
 
 # 챕터 1
 
@@ -98,7 +97,7 @@ $>python3 world.py
 $>
 ```
 
-> :information_source: `globals()`
+> :bulb: `globals()`
 
 ## 연습 02: 메아리
 
@@ -107,20 +106,22 @@ $>
 | 제출할 폴더 | `ex01`    |
 | 제출할 파일 | `echo.py` |
 
-문자열 입력을 받고 그대로 다시 출력하는 프로그램을 만들어보세요.
+입력을 받고 그대로 다시 출력하는 프로그램을 만들어보세요.
 
 > :desktop_computer: 출력 예시
 
 ```bash
-$> python3 what.py
-get input: some random word
-some random word
+$> python3 echo.py some random word
+some
+random
+word
 $>
 
 $> python3 what.py
-get input:
 $>
 ```
+
+> :bulb: `sys.argv`
 
 ## 연습 03: 안녕 변수???
 
@@ -142,7 +143,6 @@ spam = 42
 4. 변수(가 가리키는 객체)의 속성을 출력하세요.
 5. 변수(가 가리키는 객체)에 11을 더한 값을 출력하세요.
 
-> :bulb: 메모리 주소는 실행 시마다 변경될 수 있습니다. 걱정하지 마세요!
 > :desktop_computer: 출력 예시
 
 ```bash
@@ -154,7 +154,9 @@ $>python3 my_vars.py
 $>
 ```
 
-> :information_source: `type`, `id()`, `hex()`
+> 메모리 주소는 실행 시마다 변경될 수 있습니다. 걱정하지 마세요!
+
+> :bulb: `type`, `id()`, `hex()`
 
 ## 연습 04: 안녕 객체???
 
@@ -170,25 +172,34 @@ $>
 - `소수` 객체 `3.14`
 - `문자열` 객체 `Spam`
 
-> 출력 예시
+> :desktop_computer: 출력 예시
 
 ```bash
 $>python3 intobj.py
 ['__abs__', '__add__', '__and__', '__bool__', '__ceil__', '__class__', '__delattr__', '__dir__', '__divmod__', '__doc__', '__eq__', '__float__', '__floor__', '__floordiv__', '__format__', '__ge__', '__getattribute__', '__getnewargs__', '__gt__', '__hash__', '__index__', '__init__', '__init_subclass__', '__int__', '__invert__', '__le__', '__lshift__', '__lt__', '__mod__', '__mul__', '__ne__', '__neg__', '__new__', '__or__', '__pos__', '__pow__', '__radd__', '__rand__', '__rdivmod__', '__reduce__', '__reduce_ex__', '__repr__', '__rfloordiv__', '__rlshift__', '__rmod__', '__rmul__', '__ror__', '__round__', '__rpow__', '__rrshift__', '__rshift__', '__rsub__', '__rtruediv__', '__rxor__', '__setattr__', '__sizeof__', '__str__', '__sub__', '__subclasshook__', '__truediv__', '__trunc__', '__xor__', 'as_integer_ratio', 'bit_count', 'bit_length', 'conjugate', 'denominator', 'from_bytes', 'imag', 'numerator', 'real', 'to_bytes']
 ```
 
-> :information_source: `dirs()`
+> :bulb: `dirs()`
 
-> :bulb: `a = 42; a + 11`, `a = 42; a.__add__(11)`
+> :information_source: `a = 42; a + 11`, `a = 42; a.__add__(11)`
 
-# TODO
-
-## 연습 05: 별 :star: 모양으로 꾸며볼게요
+## 연습 05: 오늘의 날씨: 맑음
 
 | :gear: Py00 | 연습 05                |
 | :---------- | :--------------------- |
 | 제출할 폴더 | `ex04`                 |
-| 제출할 파일 | `tag.py`               |
+| 제출할 파일 | `diary.py`             |
 | 금지 함수   | `+`, `%`, `str.format` |
 
+요일, 날씨, 한 일을 인자로 받아서 다음과 같이 출력해주는 일기 프로그램을 만들어봅시다!
+
 > 출력 예시
+
+```bash
+$>python3 diary.py 월요일 맑음 "학교에 갔다"
+요일: 월요일, 날씨: 맑음
+오늘은 학교에 갔다. 참 재미있었다.
+$>
+```
+
+> :bulb: a, b, c = [1, 2, 3]

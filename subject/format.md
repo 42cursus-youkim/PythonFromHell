@@ -1,8 +1,10 @@
-/\*
+# 서식 개요
 
 [깃허브 이모티콘 목록 :hammer:](https://gist.github.com/rxaviers/7360908)
 
 [마크다운 요약 :page_with_curl:](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
+
+깃허브 마크다운 이미지 서식: `![이미지 이름](이미지 링크)`
 
 ### VSCode에서 마크다운 렌더링 보는 법:
 
@@ -15,16 +17,14 @@
 - [cmd+b,i 단축키, 자동 포매팅, 목차 자동 생성](https://marketplace.visualstudio.com/items?itemName=yzhang.markdown-all-in-one)
 - [미리보기 깃허브 형식으로 바꾸기](https://marketplace.visualstudio.com/items?itemName=bierner.markdown-preview-github-styles)
 - [미리보기에서 이모티콘 렌더링](https://marketplace.visualstudio.com/items?itemName=bierner.markdown-emoji)
-  \*/
 
-```c
-// 주석
-/* 여러줄 주석 */
-// {}: 문자열에서: 그대로 넣을 내용 {그때그때 다르게 넣을 내용}
+`그대로 넣을 내용 {그때그때 다르게 넣을 내용}`
 
-// 이 아래부터 서식
-// 여기서 자유롭게 수정(추가/삭제)해도 OK!
-```
+이 아래부터 서식
+
+여기서 자유롭게 수정(추가/삭제)해도 OK!
+
+---
 
 # Python Piscine
 
@@ -36,15 +36,10 @@ _요약: {내용}_
 
 # 목차
 
-/\*
-
 자동 생성 (및 업데이트):
 
-`cmd + shift + p`
-
-`Markdown All in One: Create Table of Contents`
-
-\*/
+1. `cmd + shift + p`
+2. `Markdown All in One: Create Table of Contents`
 
 # 챕터 1
 
@@ -57,8 +52,6 @@ _요약: {내용}_
 # 챕터 2
 
 ## 시작하기 전에
-
-// 깃허브 마크다운 이미지 서식: `![이미지 이름](이미지 링크)`
 
 > :information_source: {}
 

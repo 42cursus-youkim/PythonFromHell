@@ -46,11 +46,11 @@ _요약: 뭐라고 적어야할까~요?_
 # 챕터 3
 
 ## 연습 00: n층 피라미드
-| :gear: Py01 | 연습 00      |
-| :---------- | :----------- |
-| 제출할 폴더 | `ex00`       |
-| 제출할 파일 | `pyramid.py` |
-| 허용 함수   | `range`      |
+| :gear: Py01 | 연습 00                  |
+| :---------- | :----------------------- |
+| 제출할 폴더 | `ex00`                   |
+| 제출할 파일 | `pyramid.py`             |
+| 허용 함수   | `range` `sys.argv` `int` |
 
 주어진 높이만큼 *모양 피라미드를 만드세요.
 - 실행시 1개의 숫자를 입력받을 수 있게 해주세요.
@@ -93,11 +93,11 @@ $>
 ```
 
 ## 연습 02: fizz buzz
-| :gear: Py01 | 연습 02        |
-| :---------- | :------------- |
-| 제출할 폴더 | `ex02`         |
-| 제출할 파일 | `fizz_buzz.py` |
-| 허용 함수   |                |
+| :gear: Py01 | 연습 02          |
+| :---------- | :--------------- |
+| 제출할 폴더 | `ex02`           |
+| 제출할 파일 | `fizz_buzz.py`   |
+| 허용 함수   | `sys.argv` `int` |
 
 아래 설명에 따라 결과를 출력하세요.
 - 실행시 1개의 숫자를 입력받게 해주세요.
@@ -132,7 +132,7 @@ $>
 | :---------- | :----------------------- |
 | 제출할 폴더 | `ex03`                   |
 | 제출할 파일 | `number_of_fizz_buzz.py` |
-| 허용 함수   |                          |
+| 허용 함수   | `sys.argv` `int`         |
 
 아래 설명에 따라 결과를 출력하세요.
 - 실행시 1개의 숫자를 입력받게 해주세요.
@@ -187,7 +187,7 @@ $>
 | :---------- | :--------------- |
 | 제출할 폴더 | `ex04`           |
 | 제출할 파일 | `calculation.py` |
-| 허용 함수   |                  |
+| 허용 함수   | `sys.argv` `int` |
 
 두 숫자의 덧셈, 뺄셈, 곱셈, 나눗셈 결과를 출력하세요.
 - 실행시 2개의 인자를 입력받게 해주세요.
@@ -205,11 +205,11 @@ $>
 ```
 
 ## 연습 05: 리스트 계산하기
-| :gear: Py01 | 연습 05         |
-| :---------- | :-------------- |
-| 제출할 폴더 | `ex05`          |
-| 제출할 파일 | `cal_list.py`   |
-| 허용 함수   | `int` `complex` |
+| :gear: Py01 | 연습 05                           |
+| :---------- | :-------------------------------- |
+| 제출할 폴더 | `ex05`                            |
+| 제출할 파일 | `cal_list.py`                     |
+| 허용 함수   | `sys.argv` `int` `complex` `list` |
 
 리스트의 모든 숫자를 연산자로 계산하여 결과를 출력하세요.
 - 실행시 2개의 인자를 입력받게 해주세요.
@@ -222,18 +222,17 @@ $>
 > :desktop_computer: 출력 예시
 
 ```bash
-# lst [1,2,3,4,5,6,7]
-$> python3 cul_list.py + lst
+$> python3 cul_list.py + "[1,2,3,4,5,6,7]"
 1+2+3+4+5+6+7=28
 $> 
 ```
 
 ## 연습 06: 최대공약수와 최소공배수
-| :gear: Py01 | 연습 06      |
-| :---------- | :----------- |
-| 제출할 폴더 | `ex06`       |
-| 제출할 파일 | `gcd_lcm.py` |
-| 허용 함수   | `div_mod`    |
+| :gear: Py01 | 연습 06                                      |
+| :---------- | :------------------------------------------- |
+| 제출할 폴더 | `ex06`                                       |
+| 제출할 파일 | `gcd_lcm.py`                                 |
+| 허용 함수   | `sys.argv` `int` `div_mod`  `sys.argv` `int` |
 
 두개의 숫자의 최대 공약수, 최소 공배수를 출력하세요.
 - 실행시 2개의 인자를 입력받게 해주세요.
@@ -248,11 +247,11 @@ $>
 ```
 
 ## 연습 07: 학생 인적사항
-| :gear: Py01 | 연습 07               |
-| :---------- | :-------------------- |
-| 제출할 폴더 | `ex07`                |
-| 제출할 파일 | `infomation.py`       |
-| 허용 함수   | `sort` `tuple` `list` |
+| :gear: Py01 | 연습 07                                |
+| :---------- | :------------------------------------- |
+| 제출할 폴더 | `ex07`                                 |
+| 제출할 파일 | `infomation.py`                        |
+| 허용 함수   | `sys.argv` `int` `sort` `tuple` `list` |
 
 학생의 인적사항을 tuple의 형태로 만드세요.
 - 실행시 1개의 인자를 입력받게 해주세요.
@@ -264,20 +263,17 @@ $>
 > :desktop_computer: 출력 예시
 
 ```bash
-# lst = [["jake", 184, 81, 4],
-#        ["norman", 182, 86, 2],
-#        ["amy", 157, 59, 1]]
-$> python3 information.py lst
+$> python3 information.py "[[jake,184,81,4],[norman,182,86,2],[amy,157,59,1]]"
 (('amy', 157, 59, 1), ('jake', 184, 81, 4), ('norman', 182, 86, 2))
 $> 
 ```
 
 ## 연습 08: 1년 후
-| :gear: Py01 | 연습 08               |
-| :---------- | :-------------------- |
-| 제출할 폴더 | `ex08`                |
-| 제출할 파일 | `next_infomation.py`  |
-| 허용 함수   | `sort` `tuple` `list` |
+| :gear: Py01 | 연습 08                                |
+| :---------- | :------------------------------------- |
+| 제출할 폴더 | `ex08`                                 |
+| 제출할 파일 | `next_infomation.py`                   |
+| 허용 함수   | `sys.argv` `int` `sort` `tuple` `list` |
 
 일년이 지났어요.
 - 실행시 2개의 인자를 입력받게 해주세요.
@@ -288,23 +284,17 @@ $>
 > :desktop_computer: 출력 예시
 
 ```bash
-# info = [["jake", 184, 81, 4],
-#         ["norman", 182, 86, 2],
-#         ["amy", 157, 59, 1]]
-# info_t = information(info)
-# info_add = [["Rachel", 178, 63, 1]]
-
-$> python3 next_information.py info_t info_add
+$> python3 next_information.py "((amy,157,59,1),(jake,184,81,4),(norman,182,86,2))" "[[Rachel,178,63,1]]"
 (('amy', 157, 59, 2), ('norman', 182, 86, 3), ('Rachel', 178, 63, 1))
 $> 
 ```
 
 ## 연습 09: 국가와 수도
-| :gear: Py01 | 연습 09                    |
-| :---------- | :------------------------- |
-| 제출할 폴더 | `ex09`                     |
-| 제출할 파일 | `country_and_capital.py`   |
-| 허용 함수   | `dict` `set` `list` `sort` |
+| :gear: Py01 | 연습 09                               |
+| :---------- | :------------------------------------ |
+| 제출할 폴더 | `ex09`                                |
+| 제출할 파일 | `country_and_capital.py`              |
+| 허용 함수   | `sys.argv` `dict` `set` `list` `sort` |
 
 국가와 국가의 수도가 알맞게 dict 형태로 만드세요.
 - 실행시 2개의 인자를 입력받게 해주세요.
@@ -315,30 +305,20 @@ $>
 > :desktop_computer: 출력 예시
 
 ```bash
-# country = ["korea",
-#            "Singapore",
-#            "Kenya",
-#            "Iceland",
-#            "France",
-#            "Kenya"]
-# capital = ["Seoul",
-#            "Singapore",
-#            "Nairobi",
-#            "Reykjavik",
-#            "Paris",
-#            "Nairobi"]
+country = [korea,Singapore,Kenya,Iceland,France,Kenya]
+# capital = [Seoul,Singapore,Nairobi,Reykjavik,Paris,Nairobi]
 
-$> python3 capital_of_countries.py country capital
+$> python3 capital_of_countries.py "[korea,Singapore,Kenya,Iceland,France,Kenya]" "[Seoul,Singapore,Nairobi,Reykjavik,Paris,Nairobi]"
 {'France': 'Paris', 'Iceland': 'Reykjavik', 'Kenya': 'Nairobi', 'Korea': 'Seoul', 'Singapore': 'Singapore'}
 $> 
 ```
 
 ## 연습 10: 국가와 수도 ex
-| :gear: Py01 | 연습 10                                |
-| :---------- | :------------------------------------- |
-| 제출할 폴더 | `ex10`                                 |
-| 제출할 파일 | `number_of_country_and_capital.py`     |
-| 허용 함수   | `dict` `set` `list` `sort` `enumerate` |
+| :gear: Py01 | 연습 10                                           |
+| :---------- | :------------------------------------------------ |
+| 제출할 폴더 | `ex10`                                            |
+| 제출할 파일 | `number_of_country_and_capital.py`                |
+| 허용 함수   | `sys.argv` `dict` `set` `list` `sort` `enumerate` |
 
 인덱스가 key, 국가와 국가의 수도가 알맞게된 리스트를 value로한 dict 형태로 만드세요.
 - 실행시 2개의 인자를 입력받게 해주세요.
@@ -349,20 +329,7 @@ $>
 > :desktop_computer: 출력 예시
 
 ```bash
-# country = ["korea",
-#            "Singapore",
-#            "Kenya",
-#            "Iceland",
-#            "France",
-#            "Kenya"]
-# capital = ["Seoul",
-#            "Singapore",
-#            "Nairobi",
-#            "Reykjavik",
-#            "Paris",
-#            "Nairobi"]
-
-$> python3 number_of_country_and_capital.py country capital
+$> python3 number_of_country_and_capital.py "[korea,Singapore,Kenya,Iceland,France,Kenya]" "[Seoul,Singapore,Nairobi,Reykjavik,Paris,Nairobi]"
 {0: ['France', 'Paris'], 1: ['Iceland', 'Reykjavik'], 2: ['Kenya', 'Nairobi'], 3: ['Korea', 'Seoul'], 4: ['Singapore', 'Singapore']}
 $> 
 ```

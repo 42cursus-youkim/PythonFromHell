@@ -146,21 +146,37 @@ $>
 
 > :information_source: iteration을 사용해봅시다!!!
 ## 연습 05: Generator
-
+피보나치
 | :gear: Py03 | 연습 5                           |
 | :---------- | :------------------------------- |
 | 제출할 폴더 | `ex05`                           |
 | 제출할 파일 | `generator.py`                   |
 | 허용 함수   | `sys.argv` `int` `yield` `range` |
 
-주어진 두개의 숫자 사이의 홀수들을 차례대로 출력할 수 있는 함수를 만들어보세요.
-- 범위는 첫번째 인자 이상 두번째 인자 이하의 수 입니다. 
+피보나치 수열을 만드는데 무한히 출력할 수 있게 해주세요.
+- 함수를 만드는 겁니다.
+- 테스트하는 코드는 아래와 같습니다.
+```bash
+answer = generator()
+n = 5
+for i in range(n):
+  print(next(answer))
+
+$> python3 test.py
+1
+1
+2
+3
+5
+```
 
 > :desktop_computer: 출력 예시
 
 ```bash
-$> python3 generator.py 1 5
+$> python3 test.py
 1
+1
+2
 3
 5
 $>

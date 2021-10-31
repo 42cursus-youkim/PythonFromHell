@@ -78,7 +78,7 @@ $>
 
 > :desktop_computer: 출력 예시
 
-```bash
+```
 $> python3 transpose.py "[[1,2],[3,4]]"
 [[1, 3], [2, 4]]
 $>
@@ -99,7 +99,7 @@ $>
 
 > :desktop_computer: 출력 예시
 
-```bash
+```
 $> python3 pow_arr.py "[[1,2],[3,4]]"
 [[7, 10], [15, 22]]
 $> 
@@ -116,12 +116,19 @@ $>
 | 허용 함수   | `sys.argv` `int` `split` `map` `lambda` `upper` `lower` |
 
 입력받은 문자열에서 주어진 알파벳이 있는 단어는 소문자로 없는 문자는 대문자로 리스트에 저장하세요.
-- 실행시 1개의 입력인자를 입력받게 해주세요.
+- 함수를 만드는 겁니다.
+- 2개의 입력인자를 입력받게 해주세요.
+- 테스트하는 코드는 아래와 같습니다.
+  ```python
+  string = "Hello welcome to Python World!"
+  word = "l"
+  print(is_in_word(string, word))
+  ```  
 
 > :desktop_computer: 출력 예시
 
-```bash
-$> python3 is_in_word.py "Hello welcome to Python World!" "l"
+```
+$> python3 test.py
 ["HELLO", "WELCOME", "to", "python" "WORLD!"]
 $>
 ```
@@ -148,7 +155,7 @@ print(next(myit))
 
 > :desktop_computer: 출력 예시
 
-```bash
+```
 $> python3 test.py apple banana cherry
 apple
 banana
@@ -177,7 +184,7 @@ $>
 
 > :desktop_computer: 출력 예시
 
-```bash
+```
 $> python3 test.py
 1
 1

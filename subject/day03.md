@@ -122,24 +122,31 @@ $>
 
 ## 연습 04: Iterator
 
-| :gear: Py03 | 연습 4           |
-| :---------- | :--------------- |
-| 제출할 폴더 | `ex04`           |
-| 제출할 파일 | `iterator.py`    |
-| 허용 함수   | `sys.argv` `int` |
+| :gear: Py03 | 연습 4        |
+| :---------- | :------------ |
+| 제출할 폴더 | `ex04`        |
+| 제출할 파일 | `iterator.py` |
+| 허용 함수   | `next`        |
 
 입력받은 두개의 숫자 사이의 숫자들을 차례대로 출력할 수 있는 Class를 만들어 반환하세요.
+- 함수를 만드는 겁니다.
 - 범위는 첫번째 인자 이상 두번째 인자 이하의 수 입니다. 
+- 테스트 함수는 아래와 같습니다.
+```bash
+fruits = ("apple", "banana", "cherry")
+iter = iterator(fruits)
+print(next(myit))
+print(next(myit))
+print(next(myit))
+```
 
 > :desktop_computer: 출력 예시
 
 ```bash
-$> python3 iterator.py 1 5
-1
-2
-3
-4
-5
+$> python3 test.py apple banana cherry
+apple
+banana
+cherry
 <class 'StopIteration'>
 $>
 ```
@@ -161,13 +168,6 @@ answer = generator()
 n = 5
 for i in range(n):
   print(next(answer))
-
-$> python3 test.py
-1
-1
-2
-3
-5
 ```
 
 > :desktop_computer: 출력 예시

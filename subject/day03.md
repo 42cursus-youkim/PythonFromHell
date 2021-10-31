@@ -40,21 +40,27 @@ _요약: {내용}_
 
 ## 연습 00: 가장 큰 수
 
-| :gear: Py03 | 연습 00                                                     |
-| :---------- | :---------------------------------------------------------- |
-| 제출할 폴더 | `ex00`                                                      |
-| 제출할 파일 | `largest_num.py`                                            |
-| 허용 함수   | `sys.argv` `sort` `sorted` `reverse` `reversed` `int` `len` |
+| :gear: Py03 | 연습 00                                          |
+| :---------- | :----------------------------------------------- |
+| 제출할 폴더 | `ex00`                                           |
+| 제출할 파일 | `largest_num.py`                                 |
+| 허용 함수   | `sort` `sorted` `reverse` `reversed` `int` `len` |
 
 주어진 숫자(string) 리스트를 더해서 가장 큰 수 만들어 출력하세요.
+- 함수를 만드는 겁니다.
 - 실행시 1개의 입력인자를 입력받게 해주세요.
 - 주어진 입력인자를 더해서 가장 큰 수를 만들어라.
 - 숫자의 범위는 1~1000까지이다.
+- 테스트하는 코드는 아래와 같습니다.
+  ```python
+  num_lst = [3, 300, 303, 9]
+  print(largest_num(num_lst))
+  ```  
 
 > :desktop_computer: 출력 예시
 
-```bash
-$> python3 largest_number.py "[3,300,303,9]"
+```
+$> python3 test.py
 93303300
 $>
 ```
@@ -153,22 +159,21 @@ $>
 
 > :information_source: iteration을 사용해봅시다!!!
 ## 연습 05: Generator
-피보나치
-| :gear: Py03 | 연습 5                           |
-| :---------- | :------------------------------- |
-| 제출할 폴더 | `ex05`                           |
-| 제출할 파일 | `generator.py`                   |
-| 허용 함수   | `sys.argv` `int` `yield` `range` |
+| :gear: Py03 | 연습 5                |
+| :---------- | :-------------------- |
+| 제출할 폴더 | `ex05`                |
+| 제출할 파일 | `generator.py`        |
+| 허용 함수   | `int` `yield` `range` |
 
 피보나치 수열을 만드는데 무한히 출력할 수 있게 해주세요.
 - 함수를 만드는 겁니다.
 - 테스트하는 코드는 아래와 같습니다.
-```bash
-answer = generator()
-n = 5
-for i in range(n):
-  print(next(answer))
-```
+  ```bash
+  answer = generator()
+  n = 5
+  for i in range(n):
+    print(next(answer))
+  ```
 
 > :desktop_computer: 출력 예시
 

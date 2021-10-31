@@ -205,24 +205,27 @@ $>
 ```
 
 ## 연습 05: 리스트 계산하기
-| :gear: Py01 | 연습 05                           |
-| :---------- | :-------------------------------- |
-| 제출할 폴더 | `ex05`                            |
-| 제출할 파일 | `cal_list.py`                     |
-| 허용 함수   | `sys.argv` `int` `complex` `list` |
+| :gear: Py01 | 연습 05                |
+| :---------- | :--------------------- |
+| 제출할 폴더 | `ex05`                 |
+| 제출할 파일 | `cal_list.py`          |
+| 허용 함수   | `int` `complex` `list` |
 
 리스트의 모든 숫자를 연산자로 계산하여 결과를 출력하세요.
+- 함수를 만드는 겁니다.
 - 실행시 2개의 인자를 입력받게 해주세요.
 - 첫번째 인자는 연산자, 두번째 인자는 숫자로 이뤄진 리스트입니다.
-- 출력의 형태는 다음과 같습니다.
-    
-    ```python
-    [숫자] [연산자] [숫자] [연산자] ... [연산자] [숫자] = [결과]
-    ```
+- 테스트하는 코드는 아래와 같습니다.
+  ```bash
+  oper = '+'
+  num_list = [1,2,3,4,5,6,7]
+  print(cal_list(oper, num_list))
+  ```
+
 > :desktop_computer: 출력 예시
 
-```bash
-$> python3 cul_list.py + "[1,2,3,4,5,6,7]"
+```
+$> python3 test.py
 1+2+3+4+5+6+7=28
 $> 
 ```
@@ -247,89 +250,115 @@ $>
 ```
 
 ## 연습 07: 학생 인적사항
-| :gear: Py01 | 연습 07                                |
-| :---------- | :------------------------------------- |
-| 제출할 폴더 | `ex07`                                 |
-| 제출할 파일 | `infomation.py`                        |
-| 허용 함수   | `sys.argv` `int` `sort` `tuple` `list` |
+| :gear: Py01 | 연습 07                     |
+| :---------- | :-------------------------- |
+| 제출할 폴더 | `ex07`                      |
+| 제출할 파일 | `infomation.py`             |
+| 허용 함수   | `int` `sort` `tuple` `list` |
 
 학생의 인적사항을 tuple의 형태로 만드세요.
-- 실행시 1개의 인자를 입력받게 해주세요.
+- 함수를 만드는 겁니다.
 - 주어진 인자는 학생의 인적사항이 원소로 들어가있는 리스트입니다.
 - 주어진 인자를 tuple의 형태로 만드세요.
 - 이름의 오름차순으로 정렬되어야 해요. (단, 이름이 같다면 키가 큰 사람이 먼저입니다.)
 - 인적사항이 잘못되있으면 삭제합니다.
-    
+- 테스트하는 코드는 아래와 같습니다.
+  ```bash
+  info = [['jake',184,81,4],['norman',182,86,2],['amy',157,59,1]]
+  print(infomation(info))
+  ```
+
 > :desktop_computer: 출력 예시
 
 ```bash
-$> python3 information.py "[[jake,184,81,4],[norman,182,86,2],[amy,157,59,1]]"
+$> python3 test.py
 (('amy', 157, 59, 1), ('jake', 184, 81, 4), ('norman', 182, 86, 2))
 $> 
 ```
 
 ## 연습 08: 1년 후
-| :gear: Py01 | 연습 08                                |
-| :---------- | :------------------------------------- |
-| 제출할 폴더 | `ex08`                                 |
-| 제출할 파일 | `next_infomation.py`                   |
-| 허용 함수   | `sys.argv` `int` `sort` `tuple` `list` |
+| :gear: Py01 | 연습 08                     |
+| :---------- | :-------------------------- |
+| 제출할 폴더 | `ex08`                      |
+| 제출할 파일 | `next_infomation.py`        |
+| 허용 함수   | `int` `sort` `tuple` `list` |
 
 연습 07에서 일년이 지났어요.
-- 실행시 2개의 인자를 입력받게 해주세요.
+- 함수를 만드는 겁니다.
+- 2개의 인자를 입력받게 해주세요.
 - 졸업한 사람의 데이터는 삭제, 신입생의 데이터는 추가합니다.
 - 5학년 이상은 졸업입니다.
 - 인적사항이 잘못되었으면 삭제합니다.
-    
+- 테스트하는 코드는 아래와 같습니다.
+  ```bash
+  info = (('amy', 157, 59, 1), ('jake', 184, 81, 4), ('norman', 182, 86, 2))
+  info_new = [['Rachel',178,63,1]]
+  print(next_infomation(info, info_new))
+  ```
 > :desktop_computer: 출력 예시
 
-```bash
-$> python3 next_information.py "((amy,157,59,1),(jake,184,81,4),(norman,182,86,2))" "[[Rachel,178,63,1]]"
+```
+$> python3 test.py
 (('amy', 157, 59, 2), ('norman', 182, 86, 3), ('Rachel', 178, 63, 1))
 $> 
 ```
 
 ## 연습 09: 국가와 수도
-| :gear: Py01 | 연습 09                               |
-| :---------- | :------------------------------------ |
-| 제출할 폴더 | `ex09`                                |
-| 제출할 파일 | `country_and_capital.py`              |
-| 허용 함수   | `sys.argv` `dict` `set` `list` `sort` |
+| :gear: Py01 | 연습 09                    |
+| :---------- | :------------------------- |
+| 제출할 폴더 | `ex09`                     |
+| 제출할 파일 | `country_and_capital.py`   |
+| 허용 함수   | `dict` `set` `list` `sort` |
 
 국가와 국가의 수도가 알맞게 dict 형태로 만드세요.
-- 실행시 2개의 인자를 입력받게 해주세요.
+- 함수를 만드는 겁니다.
+- 2개의 인자를 입력받게 해주세요.
 - 첫번째 인자는 국가의 이름이고 두번째 인자는 수도입니다.
 - 중복된 데이터는 삭제하세요.
 - 국가를 오름차순으로 저장하세요.
-    
+- 테스트하는 코드는 아래와 같습니다.
+  ```bash
+  country = ['korea','Singapore','Kenya','Iceland','France','Kenya']
+  capital = ['Seoul','Singapore','Nairobi','Reykjavik','Paris','Nairobi']
+  print(country_and_capital(country, capital))
+  ```
+
 > :desktop_computer: 출력 예시
 
-```bash
-country = [korea,Singapore,Kenya,Iceland,France,Kenya]
-# capital = [Seoul,Singapore,Nairobi,Reykjavik,Paris,Nairobi]
-
-$> python3 capital_of_countries.py "[korea,Singapore,Kenya,Iceland,France,Kenya]" "[Seoul,Singapore,Nairobi,Reykjavik,Paris,Nairobi]"
+```
+$> python3 test.py
 {'France': 'Paris', 'Iceland': 'Reykjavik', 'Kenya': 'Nairobi', 'Korea': 'Seoul', 'Singapore': 'Singapore'}
 $> 
 ```
 
 ## 연습 10: 국가와 수도 ex
-| :gear: Py01 | 연습 10                                           |
-| :---------- | :------------------------------------------------ |
-| 제출할 폴더 | `ex10`                                            |
-| 제출할 파일 | `number_of_country_and_capital.py`                |
-| 허용 함수   | `sys.argv` `dict` `set` `list` `sort` `enumerate` |
+| :gear: Py01 | 연습 10                                |
+| :---------- | :------------------------------------- |
+| 제출할 폴더 | `ex10`                                 |
+| 제출할 파일 | `number_of_country_and_capital.py`     |
+| 허용 함수   | `dict` `set` `list` `sort` `enumerate` |
 
 인덱스가 key, 국가와 국가의 수도가 알맞게된 리스트를 value로한 dict 형태로 만드세요.
-- 실행시 2개의 인자를 입력받게 해주세요.
+- 함수를 만드는 겁니다.
+- 2개의 인자를 입력받게 해주세요.
 - 첫번째 인자는 국가의 이름이고 두번째 인자는 수도입니다.
 - 중복된 데이터는 삭제하세요.
 - 국가를 오름차순으로 저장하세요.
+- 테스트하는 코드는 아래와 같습니다.
+- ```bash
+  country = ['korea','Singapore','Kenya','Iceland','France','Kenya']
+  capital = ['Seoul','Singapore','Nairobi','Reykjavik','Paris','Nairobi']
+  print(number_of_country_and_capital(country, capital))
+  ```
     
 > :desktop_computer: 출력 예시
 
-```bash
-$> python3 number_of_country_and_capital.py "[korea,Singapore,Kenya,Iceland,France,Kenya]" "[Seoul,Singapore,Nairobi,Reykjavik,Paris,Nairobi]"
-{0: ['France', 'Paris'], 1: ['Iceland', 'Reykjavik'], 2: ['Kenya', 'Nairobi'], 3: ['Korea', 'Seoul'], 4: ['Singapore', 'Singapore']}
+```
+$> python3 test.py
+0: France's capital is Paris
+1: Iceland's capital is Reykjavik
+2: Kenya's capital is Nairobi
+3: Korea's capital is Seoul
+4: Singapore's capital is Singapore
 $> 
 ```

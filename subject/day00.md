@@ -48,25 +48,15 @@ _요약: 첫날에는 가볍게 파이썬의 기초 문법을 배워 봅시다._
 | 제출할 폴더 | `ex00`     |
 | 제출할 파일 | `hello.py` |
 
-콘솔에 `Hello World!`을 표시해보세요! 다른 문장이어도 상관 없습니다. 창의력을 발휘해 보아요!
+콘솔에 `Hello World!`을 표시해보세요! 그런데 10번, 연속해서 출력해야 합니다.
 
 > :desktop_computer: 출력 예시
 
 ```bash
-# 예시 1
 $> python3 hello.py
-Hello World!$>
-
-# 예시 2
-$> python3 hello.py
-안녕 세상!$>
-
-# 예시 3
-$> python3 hello.py
-What is the meaning of life, the universe and everything? 42$>
+Hello World!Hello World!Hello World!Hello World!Hello World!Hello World!Hello World!Hello World!Hello World!Hello World!
+$>
 ```
-
-> :warning: **줄바꿈**이 있어서는 **안 됩니다.**
 
 프로그램은 다음과 같이 작성합니다:
 

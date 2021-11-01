@@ -32,15 +32,22 @@ _요약: {내용}_
 | :-------------- | :---------- |
 | 제출할 폴더     | `rush00`  |
 | 제출할 파일     | `convert_roman_numerals.py`        |
-| 허용 함수   | `sys.argv` `dict` |
 
 입력인자로 받은 숫자를 로마 숫자로 바꿔서 출력하세요.
-
+- 숫자는 1~10, 50, 100, 500, 1000만 사용한다.
+- 11, 12, 13, ...에 해당하는 숫자는 사용하지 않는다.
+- 출력되는 로마숫자는 유니코드입니다.
 > :desktop_computer: 출력 예시
 
 ```
 $> python3 convert_roman_numerals.py 1
-
+Ⅰ
+$> python3 convert_roman_numerals.py 123
+Ⅽ
+Ⅹ
+Ⅹ
+Ⅲ
+$>
 ```
 
-> :information_source: 로마 숫자를 찾아보세요.
+> :key: dictionary와 slicing을 잘 이용해보세요!

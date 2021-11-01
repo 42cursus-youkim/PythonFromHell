@@ -2,7 +2,7 @@
 
 ## Py03
 
-_요약: {내용}_
+_요약: 클래스를 쉽게 배워봅시다._
 
 > :information_source: 오류나 개선 사항은 [이슈 트래커](https://github.com/youkim005/PythonFromHell/issues)에 등록해 주세요
 
@@ -16,13 +16,15 @@ _요약: {내용}_
 - [챕터 2](#챕터-2)
   - [시작하기 전에](#시작하기-전에)
 - [챕터 3](#챕터-3)
-  - [연습 00: 무엇이든 해내는 힘!](#연습-00-무엇이든-해내는-힘)
-  - [연습 01: 가장 큰 수](#연습-01-가장-큰-수)
-  - [연습 02: 암호해독](#연습-02-암호해독)
-  - [연습 03: 대문자, 소문자 바꾸기](#연습-03-대문자-소문자-바꾸기)
-  - [연습 04: Iterator](#연습-04-iterator)
-  - [연습 05: Generator](#연습-05-generator)
-  - [연습 06: Get_next_line](#연습-06-get_next_line)
+  - [연습 00: 안녕 클래스!!!](#연습-00-안녕-클래스)
+  - [연습 01: 안녕 객체!!!](#연습-01-안녕-객체)
+  - [연습 02: 안녕 클래스와 객체!!!](#연습-02-안녕-클래스와-객체)
+  - [연습 03: say_myname](#연습-03-say_myname)
+  - [연습 04: getter,setter](#연습-04-gettersetter)
+  - [연습 05: myname](#연습-05-myname)
+  - [연습 06: 온도계](#연습-07-온도계)
+  - [연습 07: 밸런스 조절](#연습-07-밸런스-조절)
+  - [연습 08: 상속](#연습-08-상속)
 
 # 챕터 1
 
@@ -36,217 +38,326 @@ _요약: {내용}_
 
 ## 시작하기 전에
 
-> :information_source: {}
+TODO
 
 # 챕터 3
 
-## 연습 00: 무엇이든 해내는 힘!
+## 연습 00: 안녕 클래스!!!
 
-| :gear: Py03 | 연습 00                                          |
-| :---------- | :----------------------------------------------- |
-| 제출할 폴더 | `ex01`                                           |
-| 제출할 파일 | `all_around_key.py`                                 |
+| :gear: Py03 | 연습 00    |
+| :---------- | :--------- |
+| 제출할 폴더 | `ex00`     |
+| 제출할 파일 | `hicls.py` |
 
-무엇이든 해내는 힘!
-- 함수를 import 하지 않아도 쓸 수 있는 방법이있다?
-- 실행시 1개의 인자를 받아야합니다.
-- 인자는 쌍따옴표로 묶여있어야 합니다.
+4학년 2반 학생들에 대한 정보를 정리하기 위해 클래스를 만들어 보려고 합니다.
 
-> :desktop_computer: 출력 예시
-
-```
-$> python3 all_around_key "round(3.14+9*7)"
-66
-$> python3 all_around_key "abs(-456)"
-456
-$>
-```
-
-> :key: eval은 흑마법과 같은 함수죠....
-
-## 연습 01: 가장 큰 수
-
-| :gear: Py03 | 연습 01                                          |
-| :---------- | :----------------------------------------------- |
-| 제출할 폴더 | `ex01`                                           |
-| 제출할 파일 | `largest_num.py`                                 |
-
-주어진 숫자(string) 리스트를 더해서 가장 큰 수 만들어 출력하세요.
-- 함수를 만드는 겁니다.
-- 실행시 1개의 입력인자를 입력받게 해주세요.
-- 주어진 입력인자를 더해서 가장 큰 수를 만들어라.
-- 숫자의 범위는 1~1000까지이다.
-- 테스트 코드는 아래와 같습니다.
-  ```python
-  num_lst = ['3', '300', '303', '9']
-  print(largest_num(num_lst))
-  ```  
+1. `Class42`라는 이름의 클래스를 만드세요.
+2. 클래스 `teacher`라는 이름의 변수를 만들고 값을 `parrot`으로 설정하세요.
+3. 클래스 **외부에** 함수 `show_teacher_outcls(cls) -> None`를 만드세요. 이 함수는 입력 인자로 받은 클래스가 가진 변수 `teacher`의 값을 `teacher: {teacher}` 형식으로 출력합니다.
+4. 중간에 앵무새 선생님이 전근 가셨고 펭귄 선생님이 새로 왔습니다. 클래스 **외부에** 함수 `change_teacher_outcls(cls, teacher) -> None`을 만드세요. 이 함수는 입력 인자로 받은 클래스의 선생님을 `teacher`의 값으로 바꿉니다. 이 함수를 이용해 `teacher`의 값을 `penguin`로 바꾸세요.
 
 > :desktop_computer: 출력 예시
 
-```
-$> python3 test.py
-93303300
-$>
-```
-
->:key: 숫자와 문자의 정렬순서는 다르답니다.
-
-## 연습 02: 암호해독
-
-| :gear: Py03 | 연습 02         |
-| :---------- | :-------------- |
-| 제출할 폴더 | `ex02`          |
-| 제출할 파일 | `decryption.py` |
-
-당신은 전쟁중인 나라에 장군입니다.
-어느날 스파이가 밀서를 보내왔습니다.
-밀서를 해독을 해주세요.
-- 2개의 입력인자를 입력받게 해주세요.
-- 입력인자를 번갈아 출력하면 암호해독이 됩니다.
-- 테스트 코드는 아래와 같습니다.
-  ```python
-  str1 = "오 시북쪽로기대 전켜!"
-  str2 = "후3 동으 병를출시라"
-  lst = [str1, str2]
-  print(decryption(lst))
-  ```
-
-> :desktop_computer: 출력 예시
-
-```
-$> python3 test.py
-오후 3시 북동쪽으로 기병대를 출전시켜라!
-$>
-```
-
-> :key: zip과 *를 이용하면 손쉽게 할 수 있어요!
-
-## 연습 03: 대문자, 소문자 바꾸기
-
-| :gear: Py03 | 연습 03                                      |
-| :---------- | :------------------------------------------- |
-| 제출할 폴더 | `ex03`                                       |
-| 제출할 파일 | `is_in_word.py`                              |
-
-입력받은 문자열에서 주어진 알파벳이 있는 단어는 소문자로 없는 문자는 대문자로 리스트에 저장하세요.
-- 함수를 만드는 겁니다.
-- 2개의 입력인자를 입력받게 해주세요.
-- 테스트 코드는 아래와 같습니다.
-  ```python
-  string = "Hello welcome to Python World!"
-  word = "l"
-  print(is_in_word(string, word))
-  ```  
-
-> :desktop_computer: 출력 예시
-
-```
-$> python3 test.py
-["HELLO", "WELCOME", "to", "python" "WORLD!"]
-$>
-```
-
->:key: 문자를 바꾸는 것은 간단한 일이죠.
-
-## 연습 04: Iterator
-
-| :gear: Py03 | 연습 04       |
-| :---------- | :------------ |
-| 제출할 폴더 | `ex04`        |
-| 제출할 파일 | `iterator.py` |
-| 허용 함수   | `next`        |
-
-입력받은 두개의 숫자 사이의 숫자들을 차례대로 출력할 수 있는 Class를 만들어 반환하세요.
-- 함수를 만드는 겁니다.
-- 범위는 첫번째 인자 이상 두번째 인자 이하의 수 입니다. 
-- 테스트 함수는 아래와 같습니다.
 ```bash
-fruits = ("apple", "banana", "cherry")
-iter = iterator(fruits)
-print(next(myit))
-print(next(myit))
-print(next(myit))
-```
-
-> :desktop_computer: 출력 예시
-
-```
-$> python3 test.py apple banana cherry
-apple
-banana
-cherry
+$> python3 hicls.py
+teacher: parrot
+teacher: penguin
 $>
 ```
 
-> :key: Iterator는 강력합니다.
+## 연습 01: 안녕 객체!!!
 
-## 연습 05: Generator
-| :gear: Py03 | 연습 05               |
-| :---------- | :-------------------- |
-| 제출할 폴더 | `ex05`                |
-| 제출할 파일 | `generator.py`        |
+| :gear: Py03 | 연습 01    |
+| :---------- | :--------- |
+| 제출할 폴더 | `ex01`     |
+| 제출할 파일 | `hiobj.py` |
+| 금지 함수   | `__init__` |
 
-피보나치 수열을 만드는데 무한히 출력할 수 있게 해주세요.
-- 함수를 만드는 겁니다.
-- 테스트 코드는 아래와 같습니다.
-  ```bash
-  answer = generator()
-  n = 5
-  for i in range(n):
-    print(next(answer))
-  ```
+4학년 2반을 만들었으니 이제 반의 학생 네 명에 대한 정보를 정리해 봅시다.
+
+| 이름     | 좋아하는 것 |
+| :------- | :---------- |
+| bear     | fish        |
+| fox      | grape       |
+| monkey   | patching    |
+| aligator | bath        |
+
+- [연습 00](#연습-00-안녕-클래스)에서 만든 `Class42`에다 네 객체 `bear`, `fox`, `monkey`, `aligaor`을 만들어 아래 내용을 정리해보세요.
+
+> :bulb: bear = Class42()
+
+- 각 값은 변수 `name`과 `likes`에 저장되어야 합니다.
+- 값을 출력할 때 클래스 내부의 변수 (예: `teacher`, `name`, `likes`)를 사용해야 합니다.
+- 클래스 **외부에** 함수 `run_student(obj) -> None`를 만드세요. 이 함수는 입력 인자로 받은 객체가 가진 변수 `name`의 값을 조회하여 `{obj.name} is running!` 의 형식으로 출력합니다.
+
+최종적으로 다음과 같이 출력해 보세요:
 
 > :desktop_computer: 출력 예시
 
-```
-$> python3 test.py
-1
-1
-2
-3
-5
+```bash
+$> python3 hiobj.py
+[student bear]
+likes: fish
+bear is running!
+teacher: parrot
+
+[student fox]
+likes: grape
+fox is running!
+teacher: parrot
+
+[student monkey]
+likes: patching
+monkey is running!
+teacher: parrot
+
+[student aligator]
+likes: bath
+aligator is running!
+teacher: parrot
 $>
 ```
 
-:key: Generator는 다음 문제에도 사용됩니다.
+> :warning: `Class42.name`이나 `Class42.likes`의 값이 조회가 가능하면 안됩니다.
 
-## 연습 06: Get_next_line
-| :gear: Py03 | 연습 06               |
-| :---------- | :-------------------- |
-| 제출할 폴더 | `ex06`                |
-| 제출할 파일 | `get_next_line.py`        |
+## 연습 02: 안녕 클래스와 객체!!!
 
-함수를 실행할 때마다 다음 줄을 출력될 수 있게 해주세요.
-- 두 개의 함수를 만드는 겁니다.
-- 함수 get_next_line은 두개의 인자를 받습니다.
-  - 하나는 file descriptor, 다른 하나는 bytesize입니다.
-  - bytesize는 주어지지 않는다면 임의의 숫자로 지정해주어야 합니다.
-- 함수open_file은 file descriptor를 반환해야 합니다.
-- 테스트 코드는 아래와 같습니다.
-  ```bash
-  import os
-  base_path = os.getcwd()
-  target_path = "{파일이름}"
+TODO
 
-  f = open_file(base_path + target_path)
+| :gear: Py03 | 연습 00       |
+| :---------- | :------------ |
+| 제출할 폴더 | `ex02`        |
+| 제출할 파일 | `hiclsobj.py` |
 
-  for line in get_next_line(f):
-    print(line)
-  ```
+[연습 00](#연습-00-안녕-클래스)과 [연습01](#연습-01-안녕-객체)에서 만든 `Class42`를 개선시켜봅시다.
+
+1. [연습 00](#연습-00-안녕-클래스)의 `show_teacher_outcls(cls)`, `change_teacher_outcls(cls, teacher)`을 클래스 내부로 옮겨 봅시다.
+
+   - 두 함수와 똑같은 역할을 하는 함수 `show_teacher(cls)`, `change_teacher(cls, teacher)`를 만들어 봅시다.
+   - 어떻게 하면 `Class42.show_teacher(Class42)`가 아닌 `Class42.show_teacher()` 형식으로 사용할 수 있을까요?
+
+   > :bulb: `@classmethod`
+
+2.
 
 > :desktop_computer: 출력 예시
-```
-$> python3 test.py
-this
-is
-test
-file
-you
-can
-do
-it!
+
+```bash
+$> python3 hiobj.py
+
+teacher: parrot
+
+[student bear]
+likes: fish
+bear is running!
+teacher: parrot
+
+[student fox]
+likes: grape
+fox is running!
+teacher: parrot
+
+[student monkey]
+likes: patching
+monkey is running!
+teacher: parrot
+
+[student aligator]
+likes: bath
+aligator is running!
+teacher: parrot
+
+teacher: penguin
+
+[student bear]
+likes: fish
+bear is running!
+teacher: penguin
+
+[student fox]
+likes: grape
+fox is running!
+teacher: penguin
+
+[student monkey]
+likes: patching
+monkey is running!
+teacher: penguin
+
+[student aligator]
+likes: bath
+aligator is running!
+teacher: penguin
 $>
 ```
 
-> :key:  파일을 open하고 read해서 yield 해봅시다.
+## 연습 03: say_myname
+
+| :gear: Py03 | 연습 03         |
+| :---------- | :-------------- |
+| 제출할 폴더 | `ex03`          |
+| 제출할 파일 | `say_myname.py` |
+| Keyword     | `__init__ `     |
+
+이제부터 우리는 클래스를 통해 몬스터를 만들 것 입니다.
+
+- `__init__` 을 이용해서 몬스터의 이름을 입력받고, 그 몬스터의 이름을 출력하는 `say_myname` 함수를 만드세요.
+
+> :desktop_computer: 출력 예시
+
+```python
+a = monster("Kim")
+a.say_myname()
+
+kim
+```
+
+## 연습 04: getter,setter
+
+| :gear: Py03 | 연습 04     |
+| :---------- | :---------- |
+| 제출할 폴더 | `ex04`      |
+| 제출할 파일 | `getset.py` |
+| Keyword     | `__init__`  |
+
+- 이제부터 우리는 클래스를 통해 몬스터를 만들 것 입니다.
+- 몬스터 클래스를 생성할 때, `__init`을 이용하여  `Slime`이라는 이름을 가진 몬스터를 default로 생성해야 합니다.
+- 그 후, 몬스터의 이름을 return 해주는 get_name과 몬스터의 이름을 지정해주는 set_name 함수를 만드세요.
+
+> :desktop_computer: 출력 예시
+
+```bash
+worm = monster()
+print(worm.name)
+print(worm.get_name())
+
+Slime
+Slime
+
+worm.set_name("Crying Worm")
+print(worm.name)
+print(worm.get_name())
+
+Crying Worm
+Crying Worm
+```
+
+## 연습 05: myname
+
+| :gear: Py03 | 연습 05                          |
+| :---------- | :------------------------------- |
+| 제출할 폴더 | `ex05`                           |
+| 제출할 파일 | `myname.py`                      |
+| Keyword     | `__init__``@property` `~.setter` |
+
+- 위에 4번 문제와 동일한 조건의 클래스를 만들 것 입니다.
+- 다만, 위에서 구현한 set_name과 get_name은 pythonic하지 않은 함수입니다.
+- 그래서 우리는   `@property` `~.setter` 를 통해서 `myname`이라는 함수를 만들어서, 값을 반환하거나, 값을 입력하거나 두가지 기능이 작동하도록 함수를 구현할 것입니다. 
+
+> :desktop_computer: 출력 예시
+
+```bash
+worm = monster()
+print(worm.name)
+print(worm.myname)
+
+Slime
+Slime
+
+worm.myname = "Crying Worm"
+print(worm.name)
+print(worm.myname)
+
+Crying Worm
+Crying Worm
+```
+
+## 연습 06: 온도계
+
+| :gear: Py03 | 연습 06          |
+| :---------- | :--------------- |
+| 제출할 폴더 | `ex06`           |
+| 제출할 파일 | `thermometer.py` |
+| 허용 함수   | `__init__`       |
+
+우리는 온도계 클래스를 만들어야 합니다.
+
+해당 온도계는 기본적으로 섭씨 온도를 출력합니다.
+property를 이용해서 화씨 온도도 출력하는 온도계를 만드세요.
+
+- 이 몬스터 클래스는 인스턴스를 생성할 때, 그 몬스터의 name, hp, level, exp를 입력받아야 합니다.
+- 그리고 `change_level`이라는 함수를 구현하여, level을 인자로 입력받아서, level이 인스턴스 생성할 때의 레벨보다 높다면, 그 차이의 10배만큼 level과 exp의 값을 변경해야 합니다. 
+
+> :desktop_computer: 출력 예시
+
+```python
+a = monster("small_slime", 1000, 20, 1000)
+print(a.name, a.hp, a.level, a.exp)
+small_slime 1000 20 1000
+
+a.change_level(10)
+print(a.name, a.hp, a.level, a.exp)
+
+small_slime 900 10 900
+```
+
+
+## 
+
+## 연습 06: 밸런스 조절
+
+| :gear: Py03 | 연습 06      |
+| :---------- | :----------- |
+| 제출할 폴더 | `ex06`       |
+| 제출할 파일 | `balance.py` |
+| 허용 함수   | `__init__`   |
+
+우리는 새로운 몬스터 클래스를 만들 것 입니다.
+
+- 이 몬스터 클래스는 인스턴스를 생성할 때, 그 몬스터의 name, hp, level, exp를 입력받아야 합니다.
+- 그리고 `change_level`이라는 함수를 구현하여, level을 인자로 입력받아서, level이 인스턴스 생성할 때의 레벨보다 높다면, 그 차이의 10배만큼 level과 exp의 값을 변경해야 합니다. 
+
+> :desktop_computer: 출력 예시
+
+```python
+a = monster("small_slime", 1000, 20, 1000)
+print(a.name, a.hp, a.level, a.exp)
+small_slime 1000 20 1000
+
+a.change_level(10)
+print(a.name, a.hp, a.level, a.exp)
+
+small_slime 900 10 900
+```
+
+
+## 연습 06: 상속
+
+| :gear: Py01 | 연습 06        |
+| :---------- | :------------- |
+| 제출할 폴더 | `ex06`         |
+| 제출할 파일 | `new_slime.py` |
+| 허용 함수   | `__init__`     |
+
+다음과 같이 슬라임 클래스가 선언되어 있습니다.
+
+우리는 상속이라는 개념을 통해서, 새로운 슬라임을 정의할 것입니다.
+이 새로운 슬라임은 기존의 슬라임 클래스의 기능을 사용할 수 있는데,
+기존 부모의 기능에 새로운 능력을 추가하는 함수를 가져야 합니다.
+
+- 이 몬스터 클래스는 인스턴스를 생성할 때, 그 몬스터의 name, hp, level, exp를 입력받아야 합니다.
+- 그리고 `change_level`이라는 함수를 구현하여, level을 인자로 입력받아서, level이 인스턴스 생성할 때의 레벨보다 높다면, 그 차이의 10배만큼 level과 exp의 값을 변경해야 합니다. 
+
+> :desktop_computer: 출력 예시
+
+```python
+a = monster("small_slime", 1000, 20, 1000)
+print(a.name, a.hp, a.level, a.exp)
+small_slime 1000 20 1000
+
+a.change_level(10)
+print(a.name, a.hp, a.level, a.exp)
+
+small_slime 900 10 900
+```
+

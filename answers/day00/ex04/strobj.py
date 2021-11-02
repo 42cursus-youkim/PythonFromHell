@@ -1,5 +1,5 @@
 def main():
-    print(dir(42))
+    print(dir("Spam"))
 
 
 if __name__ == "__main__":

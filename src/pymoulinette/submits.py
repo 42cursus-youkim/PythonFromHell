@@ -1,15 +1,16 @@
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 from pathlib import Path
 from sys import argv
 from typing import List
 
-from utils import Day, Ex, err
+from .utils import Day, Ex, err
 
 ANSWERS = Path(__file__).parent.parent.parent / "answers"
 
 
 @dataclass
-class Submits:
+class Submits(Sequence):
     """holds ex Path for given day, indexable"""
 
     _input: str = field(repr=False)
@@ -29,7 +30,6 @@ class Submits:
         del self._input
         return result
 
-    @property
     def __len__(self) -> int:
         return len(self.exlist)
 
@@ -47,10 +47,3 @@ class Answers(Submits):
         result = ANSWERS / Path(self._input).name
         del self._input
         return result
-
-
-if __name__ == "__main__":
-    submit = Submits("src/pymoulinette/day00")
-    answer = Answers("day00")
-    print(submit)
-    print(answer)

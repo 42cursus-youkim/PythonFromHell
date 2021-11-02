@@ -1,7 +1,8 @@
 from pathlib import Path
 from typing import Type
 
-Day, Ex = Path, Path
+Day = Path
+Ex = Path
 
 RED = "\033[1;31m"
 END = "\033[0m"

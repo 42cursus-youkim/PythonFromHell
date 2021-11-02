@@ -1,10 +1,5 @@
-def main():
-    spam = 42
+def answer(spam: int):
     print(spam)
     print(hex(id(spam)))
     print(type(spam))
     print(spam + 11)
-
-
-if __name__ == "__main__":
-    main()

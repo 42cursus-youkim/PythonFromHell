@@ -1,4 +1,4 @@
-from typing import Any, Tuple
+from typing import Any, Callable, Tuple
 
 import pytest
 
@@ -17,11 +17,17 @@ def r(s: str) -> str:
     return RED + s + END
 
 
+@pytest.fixture
+def get_funcs() -> Tuple[Callable, Callable]:
+    return answer, submit
+
+
 params = [((), {}) for _ in range(100)]
 
 
 @pytest.mark.parametrize("args, kwargs", params)
-def test_answer(capsys, args, kwargs):
+def test_answer(capsys, args, kwargs, get_funcs):
+    answer, submit = get_funcs
     a_result = answer(*args, **kwargs)
     a_capt = capsys.readouterr()
     s_result = submit(*args, **kwargs)

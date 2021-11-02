@@ -44,11 +44,8 @@ _요약: {내용}_
 $> python3 convert_roman_numerals.py 1
 Ⅰ
 $> python3 convert_roman_numerals.py 123
-Ⅽ
-Ⅹ
-Ⅹ
-Ⅲ
+ⅭⅩⅩⅠⅠⅠ
 $>
 ```
 
-> :key: dictionary와 slicing을 잘 이용해보세요!
+> :key: dictionary를 잘 이용해보세요!

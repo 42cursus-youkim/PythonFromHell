@@ -23,5 +23,9 @@ def fiddle_submit_list():
 
 
 if __name__ == "__main__":
-    fiddle_submit_list()
+    l = ["a", "b", "c", "d", "e"]
+    for i, name in enumerate(l):
+        print(f"{i:=10} is {name.upper()}")
+    # fiddle_submit_list()
+    # fiddle_submit_list()
     # fiddle_grade()

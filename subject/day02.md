@@ -19,11 +19,9 @@ _요약: 뭐라고 적어야할까~요?_
   - [연습 00: ft_join](#연습-00-ft_join)
   - [연습 01: 가변인자](#연습-01-가변인자)
   - [연습 02: print_line](#연습-02-print_line)
-  - [연습 03: say_myname](#연습-03-say_myname)
-  - [연습 04: getter,setter](#연습-04-gettersetter)
-  - [연습 05: myname](#연습-05-myname)
-  - [연습 06: 밸런스 조절](#연습-06-밸런스-조절)
-  - [연습 07: 상속](#연습-07-상속)
+  - [연습 00: lambda](#연습-00-lambda)
+  - [연습 01: map](#연습-01-map)
+  - [연습 02: filter](#연습-02-filter)
 
 # 챕터 1
 

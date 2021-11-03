@@ -1,5 +1,9 @@
-def main():
-    print("Hello World!" * 10)
+try:
+    from temp.day00.ex00.hello import main  # type: ignore
+except ImportError:
+    pass
+# def main():
+#     print("Hello World!" * 10)
 
 
 def test_main(capsys):

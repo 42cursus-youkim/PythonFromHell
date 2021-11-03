@@ -1,16 +1,16 @@
 from pathlib import Path
 
-from importutil import get_submit
+from utils import load_module
 
-main = get_submit(Path("day00/hello.py"))
+# main = get_submit(Path("day00/hello.py"))
 # from hello import main
 # def main():
 #     print("Hello World!" * 1)
 # def main():
 #     ...
+main = load_module(Path("day00/hello.py"))
 
-
-def test_main(capsys, main):
+def test_main(capsys):
     """
     stdout에 출력된 내용을 확인하고 싶을때
     입력 인자로 capsys

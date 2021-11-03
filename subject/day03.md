@@ -16,16 +16,13 @@ _요약: 클래스를 쉽게 배워봅시다._
 - [챕터 2](#챕터-2)
   - [시작하기 전에](#시작하기-전에)
 - [챕터 3](#챕터-3)
-  - [연습 00: 안녕 클래스!!!](#연습-00-안녕-클래스)
-  - [연습 01: 안녕 객체!!!](#연습-01-안녕-객체)
-  - [연습 02: 안녕 클래스와 객체!!!](#연습-02-안녕-클래스와-객체)
-  - [연습 03: say_myname](#연습-03-say_myname)
-  - [연습 04: getter,setter](#연습-04-gettersetter)
-  - [연습 05: myname](#연습-05-myname)
-  - [연습 06: 온도계](#연습-06-온도계)
+  - [연습 00: say_myname](#연습-00-say_myname)
+  - [연습 01: getter,setter](#연습-01-gettersetter)
+  - [연습 02: myname](#연습-02-myname)
+  - [연습 03: 온도계](#연습-03-온도계)
   - [](#)
-  - [연습 06: 밸런스 조절](#연습-06-밸런스-조절)
-  - [연습 06: 상속](#연습-06-상속)
+  - [연습 04: 밸런스 조절](#연습-04-밸런스-조절)
+  - [연습 05: 상속](#연습-05-상속)
 
 # 챕터 1
 
@@ -43,160 +40,12 @@ TODO
 
 # 챕터 3
 
-## 연습 00: 안녕 클래스!!!
 
-| :gear: Py03 | 연습 00    |
-| :---------- | :--------- |
-| 제출할 폴더 | `ex00`     |
-| 제출할 파일 | `hicls.py` |
+## 연습 00: say_myname
 
-4학년 2반 학생들에 대한 정보를 정리하기 위해 클래스를 만들어 보려고 합니다.
-
-1. `Class42`라는 이름의 클래스를 만드세요.
-2. 클래스 `teacher`라는 이름의 변수를 만들고 값을 `parrot`으로 설정하세요.
-3. 클래스 **외부에** 함수 `show_teacher_outcls(cls) -> None`를 만드세요. 이 함수는 입력 인자로 받은 클래스가 가진 변수 `teacher`의 값을 `teacher: {teacher}` 형식으로 출력합니다.
-4. 중간에 앵무새 선생님이 전근 가셨고 펭귄 선생님이 새로 왔습니다. 클래스 **외부에** 함수 `change_teacher_outcls(cls, teacher) -> None`을 만드세요. 이 함수는 입력 인자로 받은 클래스의 선생님을 `teacher`의 값으로 바꿉니다. 이 함수를 이용해 `teacher`의 값을 `penguin`로 바꾸세요.
-
-> :desktop_computer: 출력 예시
-
-```bash
-$> python3 hicls.py
-teacher: parrot
-teacher: penguin
-$>
-```
-
-## 연습 01: 안녕 객체!!!
-
-| :gear: Py03 | 연습 01    |
-| :---------- | :--------- |
-| 제출할 폴더 | `ex01`     |
-| 제출할 파일 | `hiobj.py` |
-| 금지 함수   | `__init__` |
-
-4학년 2반을 만들었으니 이제 반의 학생 네 명에 대한 정보를 정리해 봅시다.
-
-| 이름     | 좋아하는 것 |
-| :------- | :---------- |
-| bear     | fish        |
-| fox      | grape       |
-| monkey   | patching    |
-| aligator | bath        |
-
-- [연습 00](#연습-00-안녕-클래스)에서 만든 `Class42`에다 네 객체 `bear`, `fox`, `monkey`, `aligaor`을 만들어 아래 내용을 정리해보세요.
-
-> :bulb: bear = Class42()
-
-- 각 값은 변수 `name`과 `likes`에 저장되어야 합니다.
-- 값을 출력할 때 클래스 내부의 변수 (예: `teacher`, `name`, `likes`)를 사용해야 합니다.
-- 클래스 **외부에** 함수 `run_student(obj) -> None`를 만드세요. 이 함수는 입력 인자로 받은 객체가 가진 변수 `name`의 값을 조회하여 `{obj.name} is running!` 의 형식으로 출력합니다.
-
-최종적으로 다음과 같이 출력해 보세요:
-
-> :desktop_computer: 출력 예시
-
-```bash
-$> python3 hiobj.py
-[student bear]
-likes: fish
-bear is running!
-teacher: parrot
-
-[student fox]
-likes: grape
-fox is running!
-teacher: parrot
-
-[student monkey]
-likes: patching
-monkey is running!
-teacher: parrot
-
-[student aligator]
-likes: bath
-aligator is running!
-teacher: parrot
-$>
-```
-
-> :warning: `Class42.name`이나 `Class42.likes`의 값이 조회가 가능하면 안됩니다.
-
-## 연습 02: 안녕 클래스와 객체!!!
-
-TODO
-
-| :gear: Py03 | 연습 00       |
-| :---------- | :------------ |
-| 제출할 폴더 | `ex02`        |
-| 제출할 파일 | `hiclsobj.py` |
-
-[연습 00](#연습-00-안녕-클래스)과 [연습01](#연습-01-안녕-객체)에서 만든 `Class42`를 개선시켜봅시다.
-
-1. [연습 00](#연습-00-안녕-클래스)의 `show_teacher_outcls(cls)`, `change_teacher_outcls(cls, teacher)`을 클래스 내부로 옮겨 봅시다.
-
-   - 두 함수와 똑같은 역할을 하는 함수 `show_teacher(cls)`, `change_teacher(cls, teacher)`를 만들어 봅시다.
-   - 어떻게 하면 `Class42.show_teacher(Class42)`가 아닌 `Class42.show_teacher()` 형식으로 사용할 수 있을까요?
-
-   > :bulb: `@classmethod`
-
-2.
-
-> :desktop_computer: 출력 예시
-
-```bash
-$> python3 hiobj.py
-
-teacher: parrot
-
-[student bear]
-likes: fish
-bear is running!
-teacher: parrot
-
-[student fox]
-likes: grape
-fox is running!
-teacher: parrot
-
-[student monkey]
-likes: patching
-monkey is running!
-teacher: parrot
-
-[student aligator]
-likes: bath
-aligator is running!
-teacher: parrot
-
-teacher: penguin
-
-[student bear]
-likes: fish
-bear is running!
-teacher: penguin
-
-[student fox]
-likes: grape
-fox is running!
-teacher: penguin
-
-[student monkey]
-likes: patching
-monkey is running!
-teacher: penguin
-
-[student aligator]
-likes: bath
-aligator is running!
-teacher: penguin
-$>
-```
-
-## 연습 03: say_myname
-
-| :gear: Py03 | 연습 03         |
+| :gear: Py03 | 연습 00         |
 | :---------- | :-------------- |
-| 제출할 폴더 | `ex03`          |
+| 제출할 폴더 | `ex00`          |
 | 제출할 파일 | `say_myname.py` |
 
 이제부터 우리는 클래스를 통해 몬스터를 만들 것 입니다.
@@ -226,11 +75,11 @@ kim
 ```
 > :bulb: `__init__`
 
-## 연습 04: getter,setter
+## 연습 01: getter,setter
 
-| :gear: Py03 | 연습 04     |
+| :gear: Py03 | 연습 01     |
 | :---------- | :---------- |
-| 제출할 폴더 | `ex04`      |
+| 제출할 폴더 | `ex01`      |
 | 제출할 파일 | `getset.py` |
 
 이제부터 우리는 클래스를 통해 몬스터를 만들 것 입니다.
@@ -277,9 +126,9 @@ Crying Worm
 
 ## 연습 05: myname
 
-| :gear: Py03 | 연습 05                          |
+| :gear: Py03 | 연습 02                          |
 | :---------- | :------------------------------- |
-| 제출할 폴더 | `ex05`                           |
+| 제출할 폴더 | `ex02`                           |
 | 제출할 파일 | `myname.py`                      |
 
 위에 4번 문제와 동일한 조건의 클래스를 만들 것 입니다.
@@ -326,9 +175,9 @@ Crying Worm
 ```
 > :bulb: `__init__``@property` `~.setter`
 
-## 연습 06: 온도계
+## 연습 03: 온도계
 
-| :gear: Py03 | 연습 06          |
+| :gear: Py03 | 연습 03          |
 | :---------- | :--------------- |
 | 제출할 폴더 | `ex06`           |
 | 제출할 파일 | `celsius.py` |
@@ -392,9 +241,9 @@ ValueError: Temperature error
 ```
 > :bulb: `__init__``@property` `~.setter`
 
-## 연습 07: 밸런스 조절
+## 연습 04: 밸런스 조절
 
-| :gear: Py03 | 연습 07      |
+| :gear: Py03 | 연습 04    |
 | :---------- | :----------- |
 | 제출할 폴더 | `ex07`       |
 | 제출할 파일 | `balance.py` |
@@ -433,9 +282,9 @@ print(a.name, a.hp, a.level, a.exp)
 ```
 > :bulb: `__init__``@property` `~.setter`
 
-## 연습 08: 상속
+## 연습 05: 상속
 
-| :gear: Py03 | 연습 08        |
+| :gear: Py03 | 연습 05        |
 | :---------- | :------------- |
 | 제출할 폴더 | `ex08`         |
 | 제출할 파일 | `new_slime.py` |

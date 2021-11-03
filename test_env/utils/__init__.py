@@ -1,1 +1,1 @@
-from .importutil import load_module
+from .importutil import load_submit

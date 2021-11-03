@@ -3,7 +3,7 @@ from sys import argv
 from typing import List
 
 from .submits import Answers, Submits
-from .utils import Day, Ex, err
+from utils import Day, Ex, err
 
 
 class Grader:

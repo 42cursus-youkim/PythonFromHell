@@ -13,5 +13,9 @@ def err(msg: str) -> None:
     exit(1)
 
 
+def reds(s: str) -> str:
+    return RED + s + END
+
+
 if __name__ == "__main__":
     err("test")

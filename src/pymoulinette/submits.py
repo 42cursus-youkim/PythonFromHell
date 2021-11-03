@@ -4,7 +4,7 @@ from pathlib import Path
 from sys import argv
 from typing import List
 
-from .utils import Day, Ex, err
+from utils import Day, Ex, err
 
 ANSWERS = Path(__file__).parent.parent.parent / "answers"
 

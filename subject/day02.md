@@ -151,7 +151,7 @@ print(answer2)
 from print_line import answer
 
 
-answer
+answer()
 #출력 결과
 =====
 Hello, Python!!
@@ -204,6 +204,7 @@ map함수는 함수와 iterable 인자를 받아서,
 각 함수를 iterable 인자에 적용한 값을 이러레이터로 반환해줍니다.
 
 1. 위에 만들었던 lambda 함수를 이용하여, 리스트에 있는 값들을 제곱해서 다시 리스트로 반환하는 함수를 만드세요
+(인자로는 정수만 주어집니다.)
 
 - 함수의 프로토타입은 다음과 같습니다.
 
@@ -221,8 +222,7 @@ from map import answer
 
 
 a = [1, 2, 3, 4, 5]
-b = answer(a)
-print(b)
+print(answer(a))
 #출력 결과
 [1, 4, 9, 16, 25]
 #
@@ -240,8 +240,8 @@ print(b)
 filter라는 함수가 있습니다.  filter 함수는 함수와 iterable 인자를 받아서,
 각 함수를 iterable 인자에 적용한 값이 참인 요소만 이러레이터로 반환해줍니다.
 
-1. 리스트 안에서 filter를 이용하여, level이 20 이상인 몬스터의 이름을 출력하는 함수를 만드세요.
-2. 다음 list 안에 몬스터에 대한 정보가 담긴 dictionary가 저장되어있습니다.
+1. 리스트 안에서 filter를 이용하여, level이 20 이상인 몬스터의 이름을 리스트로 반환하는 함수를 만드세요.
+2. 다음 list 안에는 몬스터에 대한 정보가 담긴 dictionary가 저장되어 있습니다.
 ```python
     list_monster = [
         {'name' : 'monster1`, 'hp' : 100, 'level' : 20},
@@ -256,7 +256,7 @@ filter라는 함수가 있습니다.  filter 함수는 함수와 iterable 인자
   from typing import Dict, List, Any
 
 
-  def answer(list_monster : List[Dict[str, Any]]):
+  def answer(list_monster : List[Dict[str, Any]]) -> List:
   ```
 
 > :desktop_computer: 출력 예시
@@ -266,17 +266,15 @@ from check_level import answer
 
 
 list_monster = [
-    {'name' : 'monster1', 'hp' : 100, 'level' : 20},
-    {'name' : 'monster2', 'hp' : 200, 'level' : 30},
-    {'name' : 'monster3', 'hp' : 300, 'level' : 10},
-    {'name' : 'monster4', 'hp' : 400, 'level' : 210},
+    {'name' : 'ork', 'hp' : 100, 'level' : 20},
+    {'name' : 'invisible dragon', 'hp' : 200, 'level' : 30},
+    {'name' : 'crazy slime', 'hp' : 300, 'level' : 10},
+    {'name' : 'king rabbit', 'hp' : 400, 'level' : 210},
 ]
 
-answer(list_monster)
+print(answer(list_monster))
 #출력 결과
-monster1
-monster2
-monster4
+[{'name': 'ork', 'hp': 100, 'level': 20}, {'name': 'invisible dragon', 'hp': 200, 'level': 30}, {'name': 'king rabbit', 'hp': 400, 'level': 210}]
 #
 ```
 > :bulb: `labmda` `filter` `map`

@@ -386,7 +386,7 @@ set value
 c.temperature = -700
 #출력 결과
 Traceback (most recent call last):
-    raise ValueError("Temperature error")
+    raise ValueError("Temperature can't be lower than absolute zero!")
 ValueError: Temperature error
 #
 ```
@@ -402,9 +402,9 @@ ValueError: Temperature error
 우리는 새로운 몬스터 클래스를 만들 것 입니다.
 
 1. 이 몬스터 클래스는 인스턴스를 생성할 때, 그 몬스터의 name, hp, level, exp를 입력받아야 합니다.
-  (모든 인자는 int형 입니다.)
+  (모든 인자는 10 이상의 자연수만 입력됩니다.)
 2. 그리고 `change_level`이라는 함수를 구현하여, level을 인자로 입력받아서, 기존의 level을 해당 level로 변경합니다. 이 때, 우리는 1보다 작은 정수를 넣지는 않을 것 입니다.
-3. level이 기존 level가 차이가 있다면, 그 차이의 10배만큼 hp와 exp의 값을 변경해야 합니다. 
+3. 변경하려는 level이 기존 level가 차이가 있다면, 그 차이의 10배만큼 hp와 exp의 값을 변경해야 합니다. 
 4. hp와 exp는 10보다 작아질 수 없습니다.
 
 - 클래스의 프로토타입은 다음과 같습니다.
@@ -444,6 +444,7 @@ print(a.name, a.hp, a.level, a.exp)
 우리는 상속이라는 개념을 통해서, 새로운 슬라임 클래스를 정의할 것입니다.
 이전 문제에서 사용했던 balance.py도 같은 디렉토리 내에 있어야 합니다.
 1. 이 새로운 슬라임은 생성할 때, 그 슬라임의 name, hp, level, exp를 입력받아야 합니다. 모두 기본 공격력은 50이고, 선언할 때 따로 공격력을 입력받지 않습니다.
+((모든 인자는 자연수만 입력됩니다.))
 2. 기존 몬스터 클래스의 기능에 추가로, 새로운 능력을 추가하는 함수들을 만들 것 입니다.
 - atk
 몬스터 클래스 내의 myname 함수와 같이 공격력을 입력도 받고, 출력도 할 수 있는 함수를 만들어야 합니다.

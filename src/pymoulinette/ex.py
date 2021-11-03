@@ -2,8 +2,7 @@ from typing import Any, Callable, Tuple
 
 import pytest
 
-from utils import END, RED
-
+from utils import reds as r
 
 def answer():
     print("Hello World!")
@@ -11,10 +10,6 @@ def answer():
 
 def submit():
     print("Hello World!")
-
-
-def r(s: str) -> str:
-    return RED + s + END
 
 
 @pytest.fixture

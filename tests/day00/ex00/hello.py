@@ -13,9 +13,10 @@ def test_main(capsys):
 
     def test_ab(capsys):
         a()
-        assert capsys.readouterr().out == "AAA\n"
+        a_res = capsys.readouterr().out
         b()
-        assert capsys.readouterr().out == "BBB\n"
+        a_res = capsys.readouterr().out
+        assert a_res == b_res
     """
     main()
     assert capsys.readouterr().out == "Hello World!" * 10 + "\n"

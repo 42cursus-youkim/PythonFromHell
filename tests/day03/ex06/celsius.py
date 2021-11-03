@@ -60,12 +60,3 @@ def test_set_exception():
 
 if __name__ == "__main__":
     pytest.main()
-# c = Celsius()
-# print("----------")
-# print(c._temperature)
-# print("----------")
-# print(c.to_fahrenheit())
-# print("----------")
-# c.temperature = 300
-# print("----------")
-# c.temperature = -700

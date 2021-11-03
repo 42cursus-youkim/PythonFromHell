@@ -73,14 +73,14 @@ $>
 | :gear: Py01 | 연습 01      |
 | :---------- | :----------- |
 | 제출할 폴더 | `ex01`       |
-| 제출할 파일 | `alpabet.py` |
+| 제출할 파일 | `alphabet.py` |
 
 알파벳을 a부터 z까지 출력하세요.
 
 > :desktop_computer: 출력 예시
 
 ```bash
-$> python3 alpabet.py
+$> python3 alphabet.py
 a
 b
 c
@@ -263,7 +263,7 @@ $>
 - 함수를 만드는 겁니다.
 - 주어진 인자는 학생의 인적사항이 원소로 들어가있는 리스트입니다.
 - 주어진 인자를 tuple의 형태로 만드세요.
-- 이름의 오름차순으로 정렬되어야 해요. (단, 이름이 같다면 키가 큰 사람이 먼저입니다.)
+- 이름의 오름차순으로 정렬되어야 해요.
 - 인적사항이 잘못되있으면 삭제합니다.
 - 테스트하는 코드는 아래와 같습니다.
   ```bash
@@ -296,14 +296,14 @@ $>
 - 테스트하는 코드는 아래와 같습니다.
   ```bash
   info = (('amy', 157, 59, 1), ('jake', 184, 81, 4), ('norman', 182, 86, 2))
-  info_new = [['Rachel',178,63,1]]
-  print(next_infomation(info, info_new))
+  info_news = [['rachel',178,63,1]]
+  print(next_infomation(info, info_news))
   ```
 > :desktop_computer: 출력 예시
 
 ```
 $> python3 test.py
-(('amy', 157, 59, 2), ('norman', 182, 86, 3), ('Rachel', 178, 63, 1))
+(('amy', 157, 59, 2), ('norman', 182, 86, 3), ('rachel', 178, 63, 1))
 $> 
 ```
 

@@ -79,7 +79,7 @@ $>
 - 테스트 코드는 아래와 같습니다.
   ```python
   num_lst = ['3', '300', '303', '9']
-  print(largest_num(num_lst))
+  print(answer(num_lst))
   ```
 
 > :desktop_computer: 출력 예시
@@ -109,7 +109,7 @@ $>
   str1 = "오 시북쪽로기대 전켜!"
   str2 = "후3 동으 병를출시라"
   lst = [str1, str2]
-  print(decryption(lst))
+  print(answer(lst))
   ```
 
 > :desktop_computer: 출력 예시
@@ -136,7 +136,7 @@ $>
   ```python
   string = "Hello welcome to Python World!"
   word = "l"
-  print(is_in_word(string, word))
+  print(answer(string, word))
   ```
 
 > :desktop_computer: 출력 예시
@@ -160,13 +160,14 @@ $>
 입력받은 두개의 숫자 사이의 숫자들을 차례대로 출력할 수 있는 Class를 만들어 반환하세요.
 - 함수를 만드는 겁니다.
 - 테스트 함수는 아래와 같습니다.
-```bash
-fruits = ("apple", "banana", "cherry")
-iter = iterator(fruits)
-print(next(myit))
-print(next(myit))
-print(next(myit))
-```
+  ```bash
+  fruits = ("apple", "banana", "cherry")
+  iter = answer(fruits)
+  print(next(myit))
+  print(next(myit))
+  print(next(myit))
+  print(next(myit))
+  ```
 
 > :desktop_computer: 출력 예시
 
@@ -175,6 +176,7 @@ $> python3 test.py apple banana cherry
 apple
 banana
 cherry
+<class 'StopIteration'>
 $>
 ```
 
@@ -190,10 +192,10 @@ $>
 - 함수를 만드는 겁니다.
 - 테스트 코드는 아래와 같습니다.
   ```bash
-  answer = generator()
+  ans = answer()
   n = 5
   for i in range(n):
-    print(next(answer))
+    print(next(ans))
   ```
 
 > :desktop_computer: 출력 예시
@@ -230,7 +232,7 @@ $>
   
   f = open_file(base_path + target_path)
   
-  for line in get_next_line(f):
+  for line in answer(f):
     print(line)
   ```
 

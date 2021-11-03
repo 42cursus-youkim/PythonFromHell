@@ -222,7 +222,7 @@ $>
   ```bash
   oper = '+'
   num_list = [1,2,3,4,5,6,7]
-  print(cal_list(oper, num_list))
+  print(answer(oper, num_list))
   ```
 
 > :desktop_computer: 출력 예시
@@ -268,7 +268,7 @@ $>
 - 테스트하는 코드는 아래와 같습니다.
   ```bash
   info = [['jake',184,81,4],['norman',182,86,2],['amy',157,59,1]]
-  print(infomation(info))
+  print(abswer(info))
   ```
 
 > :desktop_computer: 출력 예시
@@ -297,7 +297,7 @@ $>
   ```bash
   info = (('amy', 157, 59, 1), ('jake', 184, 81, 4), ('norman', 182, 86, 2))
   info_news = [['rachel',178,63,1]]
-  print(next_infomation(info, info_news))
+  print(answer(info, info_news))
   ```
 > :desktop_computer: 출력 예시
 
@@ -323,7 +323,7 @@ $>
   ```bash
   country = ['korea','Singapore','Kenya','Iceland','France','Kenya']
   capital = ['Seoul','Singapore','Nairobi','Reykjavik','Paris','Nairobi']
-  print(country_and_capital(country, capital))
+  print(answer(country, capital))
   ```
 
 > :desktop_computer: 출력 예시
@@ -353,7 +353,7 @@ $>
 - ```bash
   country = ['korea','Singapore','Kenya','Iceland','France','Kenya']
   capital = ['Seoul','Singapore','Nairobi','Reykjavik','Paris','Nairobi']
-  print(number_of_country_and_capital(country, capital))
+  print(answer(country, capital))
   ```
     
 > :desktop_computer: 출력 예시

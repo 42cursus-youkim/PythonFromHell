@@ -1,9 +1,16 @@
-# def main():
-#     print("Hello World!" * 10)
-def main():
-    ...
+from pathlib import Path
 
-def test_main(capsys):
+from importutil import get_submit
+
+main = get_submit(Path("day00/hello.py"))
+# from hello import main
+# def main():
+#     print("Hello World!" * 1)
+# def main():
+#     ...
+
+
+def test_main(capsys, main):
     """
     stdout에 출력된 내용을 확인하고 싶을때
     입력 인자로 capsys
@@ -19,4 +26,5 @@ def test_main(capsys):
         assert capsys.readouterr().out == "BBB\n"
     """
     main()
-    assert capsys.readouterr().out == "Hello World!" * 10 + "\n"
+    out = capsys.readouterr().out
+    assert out == "Hello World!" * 10 + "\n"

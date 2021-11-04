@@ -26,26 +26,42 @@ from random import randint
 
 import pytest
 
-name = ['Liam', 'Olivia',
-        'Noah', 'Emma',
-        'Oliver', 'Ava',
-        'Elijah', 'Charlotte',
-        'William', 'Sophia',
-        'James', 'Amelia',
-        'Benjamin', 'Isabella',
-        'Lucas', 'Mia',
-        'Henry', 'Evelyn',
-        'Alexander', 'Harper']
+name = [
+    "Liam",
+    "Olivia",
+    "Noah",
+    "Emma",
+    "Oliver",
+    "Ava",
+    "Elijah",
+    "Charlotte",
+    "William",
+    "Sophia",
+    "James",
+    "Amelia",
+    "Benjamin",
+    "Isabella",
+    "Lucas",
+    "Mia",
+    "Henry",
+    "Evelyn",
+    "Alexander",
+    "Harper",
+]
 
 param = []
 for _ in range(8):
-    param.append([name[randint(0, 19)], randint(140, 190), randint(40, 120), randint(1, 4)])
+    param.append(
+        [name[randint(0, 19)], randint(140, 190), randint(40, 120), randint(1, 4)]
+    )
 
 new_param = [[name[randint(0, 19)], randint(140, 190), randint(40, 120), randint(1, 4)]]
+
 
 @pytest.mark.parametrize("lst, lst_new", [[param, new_param] for _ in range(6)])
 def test_get_set(lst, lst_new):
     assert answer(lst, lst_new) == submit(lst, lst_new)
+
 
 if __name__ == "__main__":
     pytest.main()

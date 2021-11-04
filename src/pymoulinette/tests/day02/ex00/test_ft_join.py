@@ -7,16 +7,16 @@ def answer(word: str, *args: str) -> str:
     return r
 
 
-
 import pytest
 
 
 def test_answer():
-    temp = "small slime","red ork", "elf hunter"
+    temp = "small slime", "red ork", "elf hunter"
 
-    assert answer(" ", "small slime","red ork", "elf hunter") == " ".join(temp)
-    assert answer("____", "small slime","red ork", "elf hunter") == "____".join(temp)
-    assert answer("\n", "small slime","red ork", "elf hunter") == "\n".join(temp)
+    assert answer(" ", "small slime", "red ork", "elf hunter") == " ".join(temp)
+    assert answer("____", "small slime", "red ork", "elf hunter") == "____".join(temp)
+    assert answer("\n", "small slime", "red ork", "elf hunter") == "\n".join(temp)
+
 
 if __name__ == "__main__":
     pytest.main()

@@ -15,6 +15,7 @@ class monster:
         if self.exp < 10:
             self.exp = 10
 
+
 from random import randint
 
 import pytest
@@ -29,20 +30,23 @@ def king_monster():
     """
     return monster("king slime", 100, 999, 100)
 
+
 test_monsters = [
     ["crying worms", 10, 10, 10],
     ["ork", 100, 10, 100],
     ["invisible dragon", 100000, 100000000, 100000],
 ]
 
+
 @pytest.mark.parametrize("temp", test_monsters)
 def test_init(temp):
     """같은 테스트를 인자만 바꿔서 여러번 해야할 때"""
-    monster1 = monster(temp[0],temp[1],temp[2],temp[3])
+    monster1 = monster(temp[0], temp[1], temp[2], temp[3])
     assert monster1.name == temp[0]
     assert monster1.hp == temp[1]
     assert monster1.level == temp[2]
     assert monster1.exp == temp[3]
+
 
 @pytest.mark.parametrize("level", [randint(1, 1000) for _ in range(100)])
 def test_change_level(level, king_monster):

@@ -6,8 +6,9 @@ def answer(n):
             print("fizz")
         if not (num % 5):
             print("buzz")
-        if (num % 3 and num % 5):
+        if num % 3 and num % 5:
             print(num)
+
 
 # def submit(n):
 #     if n < 0:
@@ -26,6 +27,7 @@ from random import randint
 
 import pytest
 
+
 @pytest.mark.parametrize("temp", [randint(0, 999) for _ in range(20)])
 def test_get_set(temp, capsys):
     answer(temp)
@@ -33,6 +35,7 @@ def test_get_set(temp, capsys):
     submit(temp)
     sub_res = capsys.readouterr().out
     assert ans_res == sub_res
+
 
 if __name__ == "__main__":
     pytest.main()

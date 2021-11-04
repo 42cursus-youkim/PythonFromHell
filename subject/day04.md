@@ -48,18 +48,20 @@ _요약: {내용}_
 | 제출할 파일 | `all_around_key.py` |
 
 무엇이든 해내는 힘!
-- 함수를 import 하지 않아도 쓸 수 있는 방법이있다?
-- 실행시 1개의 인자를 받아야합니다.
+- 문자열로 입력되서 계사는 해줄 수 있다?
+- 1개의 인자를 입력받게 해주세요.
 - 인자는 쌍따옴표로 묶여있어야 합니다.
+- 테스트 코드는 아래와 같습니다.
+  ```
+  from all_around_key import answer
+  print(answer("3.14+9*7"))
+  ```
 
 > :desktop_computer: 출력 예시
 
 ```
-$> python3 all_around_key "round(3.14+9*7)"
-66
-$> python3 all_around_key "abs(-456)"
-456
-$>
+$> python3 test.py
+66.14
 ```
 
 > :key: eval은 흑마법과 같은 함수죠....
@@ -77,7 +79,8 @@ $>
 - 주어진 입력인자를 더해서 가장 큰 수를 만들어라.
 - 숫자의 범위는 1~1000까지이다.
 - 테스트 코드는 아래와 같습니다.
-  ```python
+  ```
+  from largest_num import answer
   num_lst = ['3', '300', '303', '9']
   print(answer(num_lst))
   ```
@@ -105,7 +108,8 @@ $>
 - 2개의 입력인자를 입력받게 해주세요.
 - 입력인자를 번갈아 출력하면 암호해독이 됩니다.
 - 테스트 코드는 아래와 같습니다.
-  ```python
+  ```
+  from decryption import answer
   str1 = "오 시북쪽로기대 전켜!"
   str2 = "후3 동으 병를출시라"
   lst = [str1, str2]
@@ -133,7 +137,8 @@ $>
 - 함수를 만드는 겁니다.
 - 2개의 입력인자를 입력받게 해주세요.
 - 테스트 코드는 아래와 같습니다.
-  ```python
+  ```
+  from is_in_word import answer
   string = "Hello welcome to Python World!"
   word = "l"
   print(answer(string, word))
@@ -155,12 +160,12 @@ $>
 | :---------- | :------------ |
 | 제출할 폴더 | `ex04`        |
 | 제출할 파일 | `iterator.py` |
-| 허용 함수   | `next`        |
 
 입력받은 두개의 숫자 사이의 숫자들을 차례대로 출력할 수 있는 Class를 만들어 반환하세요.
 - 함수를 만드는 겁니다.
 - 테스트 함수는 아래와 같습니다.
-  ```bash
+  ```
+  from iterator import answer
   fruits = ("apple", "banana", "cherry")
   iter = answer(fruits)
   print(next(myit))
@@ -172,7 +177,7 @@ $>
 > :desktop_computer: 출력 예시
 
 ```
-$> python3 test.py apple banana cherry
+$> python3 test.py
 apple
 banana
 cherry
@@ -191,7 +196,8 @@ $>
 피보나치 수열을 만드는데 무한히 출력할 수 있게 해주세요.
 - 함수를 만드는 겁니다.
 - 테스트 코드는 아래와 같습니다.
-  ```bash
+  ```
+  from generator import answer
   ans = answer()
   n = 5
   for i in range(n):
@@ -225,7 +231,8 @@ $>
   - bytesize는 주어지지 않는다면 임의의 숫자로 지정해주어야 합니다.
 - 함수open_file은 file descriptor를 반환해야 합니다.
 - 테스트 코드는 아래와 같습니다.
-  ```bash
+  ```
+  from get_next_line import answer, open_file
   import os
   base_path = os.getcwd()
   target_path = "{파일이름}"

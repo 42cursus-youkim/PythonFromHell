@@ -2,7 +2,7 @@
 
 ## Py03
 
-_요약: {내용}_
+_요약: 클래스를 쉽게 배워봅시다._
 
 > :information_source: 오류나 개선 사항은 [이슈 트래커](https://github.com/youkim005/PythonFromHell/issues)에 등록해 주세요
 
@@ -16,13 +16,13 @@ _요약: {내용}_
 - [챕터 2](#챕터-2)
   - [시작하기 전에](#시작하기-전에)
 - [챕터 3](#챕터-3)
-  - [연습 00: 무엇이든 해내는 힘!](#연습-00-무엇이든-해내는-힘)
-  - [연습 01: 가장 큰 수](#연습-01-가장-큰-수)
-  - [연습 02: 암호해독](#연습-02-암호해독)
-  - [연습 03: 대문자, 소문자 바꾸기](#연습-03-대문자-소문자-바꾸기)
-  - [연습 04: Iterator](#연습-04-iterator)
-  - [연습 05: Generator](#연습-05-generator)
-  - [연습 06: Get_next_line](#연습-06-get_next_line)
+  - [연습 00: say_myname](#연습-00-say_myname)
+  - [연습 01: getter,setter](#연습-01-gettersetter)
+  - [연습 02: myname](#연습-02-myname)
+  - [연습 03: 온도계](#연습-03-온도계)
+  - [](#)
+  - [연습 04: 밸런스 조절](#연습-04-밸런스-조절)
+  - [연습 05: 상속](#연습-05-상속)
 
 # 챕터 1
 
@@ -36,217 +36,319 @@ _요약: {내용}_
 
 ## 시작하기 전에
 
-> :information_source: {}
+TODO
 
 # 챕터 3
 
-## 연습 00: 무엇이든 해내는 힘!
 
-| :gear: Py03 | 연습 00                                          |
-| :---------- | :----------------------------------------------- |
-| 제출할 폴더 | `ex01`                                           |
-| 제출할 파일 | `all_around_key.py`                                 |
+## 연습 00: say_myname
 
-무엇이든 해내는 힘!
-- 함수를 import 하지 않아도 쓸 수 있는 방법이있다?
-- 실행시 1개의 인자를 받아야합니다.
-- 인자는 쌍따옴표로 묶여있어야 합니다.
-
-> :desktop_computer: 출력 예시
-
-```
-$> python3 all_around_key "round(3.14+9*7)"
-66
-$> python3 all_around_key "abs(-456)"
-456
-$>
-```
-
-> :key: eval은 흑마법과 같은 함수죠....
-
-## 연습 01: 가장 큰 수
-
-| :gear: Py03 | 연습 01                                          |
-| :---------- | :----------------------------------------------- |
-| 제출할 폴더 | `ex01`                                           |
-| 제출할 파일 | `largest_num.py`                                 |
-
-주어진 숫자(string) 리스트를 더해서 가장 큰 수 만들어 출력하세요.
-- 함수를 만드는 겁니다.
-- 실행시 1개의 입력인자를 입력받게 해주세요.
-- 주어진 입력인자를 더해서 가장 큰 수를 만들어라.
-- 숫자의 범위는 1~1000까지이다.
-- 테스트 코드는 아래와 같습니다.
-  ```python
-  num_lst = ['3', '300', '303', '9']
-  print(largest_num(num_lst))
-  ```  
-
-> :desktop_computer: 출력 예시
-
-```
-$> python3 test.py
-93303300
-$>
-```
-
->:key: 숫자와 문자의 정렬순서는 다르답니다.
-
-## 연습 02: 암호해독
-
-| :gear: Py03 | 연습 02         |
+| :gear: Py03 | 연습 00         |
 | :---------- | :-------------- |
-| 제출할 폴더 | `ex02`          |
-| 제출할 파일 | `decryption.py` |
+| 제출할 폴더 | `ex00`          |
+| 제출할 파일 | `say_myname.py` |
 
-당신은 전쟁중인 나라에 장군입니다.
-어느날 스파이가 밀서를 보내왔습니다.
-밀서를 해독을 해주세요.
-- 2개의 입력인자를 입력받게 해주세요.
-- 입력인자를 번갈아 출력하면 암호해독이 됩니다.
-- 테스트 코드는 아래와 같습니다.
+이제부터 우리는 클래스를 통해 몬스터를 만들 것 입니다.
+
+1. `__init__` 을 이용해서 몬스터의 이름을 문자열로 입력받고, 그 몬스터의 이름을 출력하는 `say_myname` 함수를 만드세요.
+
+- 클래스의 프로토타입은 다음과 같습니다.
+
   ```python
-  str1 = "오 시북쪽로기대 전켜!"
-  str2 = "후3 동으 병를출시라"
-  lst = [str1, str2]
-  print(decryption(lst))
+  class monster:
+      def __init__(self, name : str) -> None:
+
+      def say_myname(~~):
+
   ```
 
 > :desktop_computer: 출력 예시
 
+```python
+from say_myname import monster
+
+a = monster("Kim")
+a.say_myname()
+#출력 결과
+kim
+#
 ```
-$> python3 test.py
-오후 3시 북동쪽으로 기병대를 출전시켜라!
-$>
-```
+> :bulb: `__init__`
 
-> :key: zip과 *를 이용하면 손쉽게 할 수 있어요!
+## 연습 01: getter,setter
 
-## 연습 03: 대문자, 소문자 바꾸기
+| :gear: Py03 | 연습 01     |
+| :---------- | :---------- |
+| 제출할 폴더 | `ex01`      |
+| 제출할 파일 | `getset.py` |
 
-| :gear: Py03 | 연습 03                                      |
-| :---------- | :------------------------------------------- |
-| 제출할 폴더 | `ex03`                                       |
-| 제출할 파일 | `is_in_word.py`                              |
+이제부터 우리는 클래스를 통해 몬스터를 만들 것 입니다.
+1. 몬스터 클래스를 생성할 때, `__init__`을 이용하여  `Slime`이라는 이름을 가진 몬스터를 default로 생성해야 합니다.
+2. 몬스터의 이름을 return 해주는 get_name과 몬스터의 이름을 지정해주는 set_name 함수를 만드세요.
 
-입력받은 문자열에서 주어진 알파벳이 있는 단어는 소문자로 없는 문자는 대문자로 리스트에 저장하세요.
-- 함수를 만드는 겁니다.
-- 2개의 입력인자를 입력받게 해주세요.
-- 테스트 코드는 아래와 같습니다.
+- 클래스의 프로토타입은 다음과 같습니다.
+
   ```python
-  string = "Hello welcome to Python World!"
-  word = "l"
-  print(is_in_word(string, word))
-  ```  
+  class monster:
+      def __init__(self) -> None:
 
-> :desktop_computer: 출력 예시
+      def get_name(~~):
 
-```
-$> python3 test.py
-["HELLO", "WELCOME", "to", "python" "WORLD!"]
-$>
-```
-
->:key: 문자를 바꾸는 것은 간단한 일이죠.
-
-## 연습 04: Iterator
-
-| :gear: Py03 | 연습 04       |
-| :---------- | :------------ |
-| 제출할 폴더 | `ex04`        |
-| 제출할 파일 | `iterator.py` |
-| 허용 함수   | `next`        |
-
-입력받은 두개의 숫자 사이의 숫자들을 차례대로 출력할 수 있는 Class를 만들어 반환하세요.
-- 함수를 만드는 겁니다.
-- 범위는 첫번째 인자 이상 두번째 인자 이하의 수 입니다. 
-- 테스트 함수는 아래와 같습니다.
-```bash
-fruits = ("apple", "banana", "cherry")
-iter = iterator(fruits)
-print(next(myit))
-print(next(myit))
-print(next(myit))
-```
-
-> :desktop_computer: 출력 예시
-
-```
-$> python3 test.py apple banana cherry
-apple
-banana
-cherry
-$>
-```
-
-> :key: Iterator는 강력합니다.
-
-## 연습 05: Generator
-| :gear: Py03 | 연습 05               |
-| :---------- | :-------------------- |
-| 제출할 폴더 | `ex05`                |
-| 제출할 파일 | `generator.py`        |
-
-피보나치 수열을 만드는데 무한히 출력할 수 있게 해주세요.
-- 함수를 만드는 겁니다.
-- 테스트 코드는 아래와 같습니다.
-  ```bash
-  answer = generator()
-  n = 5
-  for i in range(n):
-    print(next(answer))
+      def set_name(~~):
   ```
 
 > :desktop_computer: 출력 예시
 
+```python
+from getset import monster
+
+
+worm = monster()
+print(worm.name)
+#출력 결과
+Slime
+#
+print(worm.get_name())
+#출력 결과
+Slime
+#
+worm.set_name("Crying Worm")
+print(worm.name)
+#출력 결과
+Crying Worm
+#
+print(worm.get_name())
+#출력 결과
+Crying Worm
+#
 ```
-$> python3 test.py
-1
-1
-2
-3
-5
-$>
-```
+> :bulb: `__init__`
 
-:key: Generator는 다음 문제에도 사용됩니다.
+## 연습 05: myname
 
-## 연습 06: Get_next_line
-| :gear: Py03 | 연습 06               |
-| :---------- | :-------------------- |
-| 제출할 폴더 | `ex06`                |
-| 제출할 파일 | `get_next_line.py`        |
+| :gear: Py03 | 연습 02                          |
+| :---------- | :------------------------------- |
+| 제출할 폴더 | `ex02`                           |
+| 제출할 파일 | `myname.py`                      |
 
-함수를 실행할 때마다 다음 줄을 출력될 수 있게 해주세요.
-- 두 개의 함수를 만드는 겁니다.
-- 함수 get_next_line은 두개의 인자를 받습니다.
-  - 하나는 file descriptor, 다른 하나는 bytesize입니다.
-  - bytesize는 주어지지 않는다면 임의의 숫자로 지정해주어야 합니다.
-- 함수open_file은 file descriptor를 반환해야 합니다.
-- 테스트 코드는 아래와 같습니다.
-  ```bash
-  import os
-  base_path = os.getcwd()
-  target_path = "{파일이름}"
+위에 4번 문제와 동일한 조건의 클래스를 만들 것 입니다.
+다만, 위에서 구현한 set_name과 get_name은 property를 이용하면, 다음 구현할 함수를 변수처럼 사용할 수 있습니다.
+1. 우리는   `@property` `~.setter` 를 통해서 `myname`이라는 함수를 만들어서, 값을 반환하거나, 값을 입력하거나 두가지 기능이 작동하도록 함수를 구현할 것입니다. 
 
-  f = open_file(base_path + target_path)
+- 클래스의 프로토타입은 다음과 같습니다.
 
-  for line in get_next_line(f):
-    print(line)
+  ```python
+  class monster:
+      def __init__(self) -> None:
+      
+      ~~
+      def myname(~~):
+
+      ~~
+      def myname(~~):
   ```
 
 > :desktop_computer: 출력 예시
+
+```python
+from myname import monster
+
+
+worm = monster()
+print(worm.name)
+#출력 결과
+Slime
+#
+print(worm.myname)
+#출력 결과
+Slime
+#
+worm.myname = "Crying Worm"
+print(worm.name)
+#출력 결과
+Crying Worm
+#
+print(worm.myname)
+#출력 결과
+Crying Worm
+#
 ```
-$> python3 test.py
-this
-is
-test
-file
-you
-can
-do
-it!
-$>
+> :bulb: `__init__``@property` `~.setter`
+
+## 연습 03: 온도계
+
+| :gear: Py03 | 연습 03          |
+| :---------- | :--------------- |
+| 제출할 폴더 | `ex06`           |
+| 제출할 파일 | `celsius.py` |
+
+우리는 온도계 클래스를 만들어야 합니다.
+
+1. 이 온도계 클래스는 선언할 때 값을 입력받지 않으면, 기본 값으로 4도가 설정됩니다.
+  (int형으로 값을 받습니다.)
+2. to_fahrenheit라는 함수를 호출하면, 설정된 온도의 화씨로 변경하여 출력합니다.
+3. 위에서 전 문제에서 사용한 방법 그대로, property를 이용하여, 온도계 클래스를 완성해주세요.
+4. 값이 설정될 때마다 "set value"를 출력해야하고, 출력할때마다 "get value"를 출력해야 합니다.
+5. 섭씨 온도는 영하 273도보다 낮을 경우, raise ValueError()를 사용하여 에러메세지를 출력해야 합니다
+
+- 클래스의 프로토타입은 다음과 같습니다.
+
+  ```python
+  class Celsius:
+      def __init__(~~):
+      
+      def to_fahrenheit(~~):
+
+      ~~
+      def temperature(~~):
+      
+      ~~
+      def temperature(~~):
+
+  ```
+
+
+> :desktop_computer: 출력 예시
+
+```python
+from celsius import Celsius
+
+
+c = Celsius()
+#출력 결과
+set value
+#
+print(c.temperature)
+#출력 결과
+get value
+4
+#
+print(c.to_fahrenheit())
+#출력 결과
+get value
+39.2
+#
+c.temperature = 300
+#출력 결과
+set value
+#
+c.temperature = -700
+#출력 결과
+Traceback (most recent call last):
+    raise ValueError("Temperature can't be lower than absolute zero!")
+ValueError: Temperature error
+#
+```
+> :bulb: `__init__``@property` `~.setter`
+
+## 연습 04: 밸런스 조절
+
+| :gear: Py03 | 연습 04    |
+| :---------- | :----------- |
+| 제출할 폴더 | `ex07`       |
+| 제출할 파일 | `balance.py` |
+
+우리는 새로운 몬스터 클래스를 만들 것 입니다.
+
+1. 이 몬스터 클래스는 인스턴스를 생성할 때, 그 몬스터의 name, hp, level, exp를 입력받아야 합니다.
+  (모든 인자는 10 이상의 자연수만 입력됩니다.)
+2. 그리고 `change_level`이라는 함수를 구현하여, level을 인자로 입력받아서, 기존의 level을 해당 level로 변경합니다. 이 때, 우리는 1보다 작은 정수를 넣지는 않을 것 입니다.
+3. 변경하려는 level이 기존 level가 차이가 있다면, 그 차이의 10배만큼 hp와 exp의 값을 변경해야 합니다. 
+4. hp와 exp는 10보다 작아질 수 없습니다.
+
+- 클래스의 프로토타입은 다음과 같습니다.
+
+  ```python
+  class monster:
+      def __init__(~~):
+
+      def change_level(~~):
+
+  ```
+
+> :desktop_computer: 출력 예시
+
+```python
+a = monster("1", 100, 20, 100)
+print(a.name, a.hp, a.level, a.exp)
+#출력 결과
+1 100 20 100
+#
+a.change_level(15)
+print(a.name, a.hp, a.level, a.exp)
+#출력 결과
+1 50 15 50
+#
+```
+> :bulb: `__init__``@property` `~.setter`
+
+## 연습 05: 상속
+
+| :gear: Py03 | 연습 05        |
+| :---------- | :------------- |
+| 제출할 폴더 | `ex08`         |
+| 제출할 파일 | `new_slime.py` |
+
+이전 문제에서 사용된 몬스터 클래스가 있습니다.
+우리는 상속이라는 개념을 통해서, 새로운 슬라임 클래스를 정의할 것입니다.
+이전 문제에서 사용했던 balance.py도 같은 디렉토리 내에 있어야 합니다.
+1. 이 새로운 슬라임은 생성할 때, 그 슬라임의 name, hp, level, exp를 입력받아야 합니다. 모두 기본 공격력은 50이고, 선언할 때 따로 공격력을 입력받지 않습니다.
+((모든 인자는 자연수만 입력됩니다.))
+2. 기존 몬스터 클래스의 기능에 추가로, 새로운 능력을 추가하는 함수들을 만들 것 입니다.
+- atk
+몬스터 클래스 내의 myname 함수와 같이 공격력을 입력도 받고, 출력도 할 수 있는 함수를 만들어야 합니다.
+해당 공격력은 0보다 작아질 수 없습니다. 0보다 작을 경우, raise ValueError()를 사용하여 에러메세지를 출력해야 합니다.
+- change_level
+몬스터 클래스 내의 change_level 함수를 오버라이딩 하여, 기존 기능에다가 공격력도 변경하는 함수를 만들어야 합니다.
+공격력은 레벨 차이만큼의 5배로 값을 변경해야 합니다.
+
+- 클래스의 프로토타입은 다음과 같습니다.
+
+  ```python
+  from balance import monster
+
+
+  class slime(~~):
+      def __init__(~~):
+      
+      ~~
+      def atk(~~):
+      
+      ~~
+      def atk(~~):
+      
+      def change_level(~~):
+
+  ```
+
+> :desktop_computer: 출력 예시
+
+```python
+from new_slime import slime
+
+
+a = slime("1", 100, 20, 100)
+print(a.name, a.hp, a.level, a.exp, a.atk)
+#출력 결과
+1 100 20 100 50
+#
+a.atk = 30
+print(a.name, a.hp, a.level, a.exp, a.atk)
+#출력 결과
+1 100 20 100 30
+#
+a.change_level(15)
+print(a.name, a.hp, a.level, a.exp, a.atk)
+#출력 결과
+1 50 15 50 5
+#
+a.change_level(10)
+print(a.name, a.hp, a.level, a.exp, a.atk)
+#출력 결과
+Traceback (most recent call last):
+    raise ValueError("atk error")
+ValueError: atk error
+#
 ```
 
-> :key:  파일을 open하고 read해서 yield 해봅시다.
+> :bulb: `__init__``@property` `~.setter` `상속` `overriding`

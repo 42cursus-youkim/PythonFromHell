@@ -8,7 +8,15 @@ _요약: {내용}_
 
 # 목차
 
-
+- [Python Piscine](#python-piscine)
+  - [Py{번호}](#py번호)
+- [목차](#목차)
+- [챕터 1](#챕터-1)
+  - [개요](#개요)
+- [챕터 2](#챕터-2)
+  - [시작하기 전에](#시작하기-전에)
+- [챕터 3](#챕터-3)
+  - [Rush 00: Convert_Roman_Numerals](#rush-00-convert_roman_numerals)
 
 # 챕터 1
 
@@ -28,26 +36,25 @@ _요약: {내용}_
 
 ## Rush 00: Convert_Roman_Numerals
 
-| :gear: Rush00 | Rush 00 |
-| :-------------- | :---------- |
-| 제출할 폴더     | `rush00`  |
-| 제출할 파일     | `convert_roman_numerals.py`        |
+| :gear: Rush00 | Rush 00                     |
+| :------------ | :-------------------------- |
+| 제출할 폴더   | `rush00`                    |
+| 제출할 파일   | `convert_roman_numerals.py` |
 
 입력인자로 받은 숫자를 로마 숫자로 바꿔서 출력하세요.
-- 숫자는 1~10, 50, 100, 500, 1000만 사용한다.
-- 11, 12, 13, ...에 해당하는 숫자는 사용하지 않는다.
-- 출력되는 로마숫자는 유니코드입니다.
+- 한개의 인자를 입력받아야 합니다.
+- 입력 숫자의 범위는 **1이상 1000이하** 입니다.
+- 로마 숫자의 계산법은 가산계산법, 감산계산법이 있습니다.
+- 하지만 우리는 편의를 위해서 가산계산법만 사용하겠습니다.
+
 > :desktop_computer: 출력 예시
 
 ```
 $> python3 convert_roman_numerals.py 1
 Ⅰ
 $> python3 convert_roman_numerals.py 123
-Ⅽ
-Ⅹ
-Ⅹ
-Ⅲ
+ⅭⅩⅩⅠⅠⅠ
 $>
 ```
 
-> :key: dictionary와 slicing을 잘 이용해보세요!
+> :key: 로마 숫자는 유니코드에 있습니다.

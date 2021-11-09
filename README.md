@@ -2,9 +2,13 @@
 
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
 
-[read in english!](./README.en.md)
+# 만든 사람!
 
-# subjects
+[@jj150618](https://github.com/jj150618)
+[@bingu-k](https://github.com/bingu-k)
+[@youkim](https://github.com/youkim005)
+
+# 과제
 
 [day00](./subject/day00.md)
 [day01](./subject/day01.md)
@@ -101,4 +105,3 @@ if __name__ == "__main__":
 
 - 변수 언패킹 시 사용하지 않는 변수는 `_`로 표현합니다.
 - `range(len(x))`의 사용은 금지됩니다.
->>>>>>> 032cd7977d02145f9e97ab6d3185fb8e7c11d417

@@ -4,9 +4,19 @@
 
 [read in english!](./README.en.md)
 
+# subjects
+
+[day00](./subject/day00.md)
+[day01](./subject/day01.md)
+[day02](./subject/day02.md)
+[day03](./subject/day03.md)
+[day04](./subject/day04.md)
+
+[rush00](./subject/rush00.md)
+[rush01](./subject/rush01.md)
+
 ## 개요
 
-=======
 **_지옥에서 온 파이썬_** 은 파이썬을 기초부터 배우기 위한 피신 프로그램입니다.
 
 - `파이썬 3.8.2+` 를 이용하여 진행됩니다.
